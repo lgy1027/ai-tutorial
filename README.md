@@ -1,6 +1,6 @@
 # AI 教程
 
-本仓库包含一系列关于智能体、工作流和本地知识库的教程。
+本仓库包含一系列关于智能体、工作流和本地知识库的教程；设计技术包括不限于LangChain、LangGraph、Graphrag等。
 
 ## 教程
 
@@ -15,9 +15,9 @@
 
 ### 公众号
 
-![alt text](images/公众号.jpg)
+<img src="images/公众号.jpg" width="300" height="290">
 
 
 ### 个人
 
-![alt text](images/个人二维码.jpg)
+<img src="images/个人二维码.jpg" width="300" height="290">
