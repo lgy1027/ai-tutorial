@@ -20,4 +20,4 @@
 
 ### 个人
 
-<img src="images/个人二维码.jpg" width="300" height="290">
+<img src="images/个人二维码.jpg" width="300" height="300">
