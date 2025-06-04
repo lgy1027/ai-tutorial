@@ -31,8 +31,8 @@ with open("docs/example.txt", "w", encoding="utf-8") as f:
 
 loader = TextLoader("docs/example.txt", encoding="utf-8")
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=100,
-    chunk_overlap=20,
+    chunk_size=50,
+    chunk_overlap=10,
     length_function=len
 )
 
@@ -85,9 +85,16 @@ print(f"重新加载后检索结果 (部分): {reloaded_found_docs[0].page_conte
 # 为了简化，我们直接修改 split_documents，为其中一些添加 category
 if len(split_documents) > 2:
     split_documents[0].metadata["category"] = "LangChain Core"
-    split_documents[1].metadata["category"] = "LCEL"
-    split_documents[2].metadata["category"] = "RAG"
-    split_documents[3].metadata["category"] = "RAG"
+    split_documents[1].metadata["category"] = "LangChain Core"
+    split_documents[2].metadata["category"] = "LangChain Core"
+    split_documents[3].metadata["category"] = "LangChain Core"
+    split_documents[4].metadata["category"] = "RAG"
+    split_documents[5].metadata["category"] = "RAG"
+    split_documents[6].metadata["category"] = "RAG"
+    split_documents[7].metadata["category"] = "LangSmith"
+    split_documents[8].metadata["category"] = "LCEL"
+    split_documents[9].metadata["category"] = "Language"
+    split_documents[10].metadata["category"] = "LangGraph"
 
 persist_directory="./chroma_db_with_meta"
 
@@ -221,7 +228,6 @@ for i, doc in enumerate(retrieved_parent_docs):
     print(f"文档 {i+1} (长度: {len(doc.page_content)}):")
     print(doc.page_content) # 打印部分内容，通常会比小块大
     print("-" * 30)
-
 # 你会发现这里的文档块长度更长，因为它们是从大块中取出的，包含了更多上下文。
 
 
@@ -251,7 +257,6 @@ self_query_retriever = SelfQueryRetriever.from_llm(
     vectorstore=vectorstore_with_meta, # 带有元数据的向量库
     document_contents=document_content_description,
     metadata_field_info=metadata_field_info,
-    verbose=True # 开启 verbose 可以看到LLM生成的查询
 )
 
 print("\n--- SelfQueryRetriever 示例 ---")
@@ -271,3 +276,59 @@ for i, doc in enumerate(retrieved_self_docs_2):
     print(f"文档 {i+1} (分类: {doc.metadata.get('category', 'N/A')}, 来源: {doc.metadata.get('source', 'N/A')}):")
     print(doc.page_content)
     print("-" * 30)
+
+
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import LLMChainExtractor
+from langchain_core.prompts import PromptTemplate
+
+# 1. 定义一个基础检索器 (比如 VectorstoreRetriever)
+base_retriever_for_compression = vectorstore.as_retriever(search_kwargs={"k": 5}) # 先多检索一些
+
+# 2. 定义一个 LLMChainExtractor (压缩器)
+# 它内部会使用一个LLM来判断哪些内容是相关的
+# llm.temperature = 0.0
+compressor = LLMChainExtractor.from_llm(llm)
+
+# 3. 创建 ContextualCompressionRetriever
+compression_retriever = ContextualCompressionRetriever(
+    base_compressor=compressor,
+    base_retriever=base_retriever_for_compression # 传入基础检索器
+)
+
+print("\n--- ContextualCompressionRetriever 示例 ---")
+query_compression = "LangChain的调试工具叫什么？"
+retrieved_compressed_docs = compression_retriever.invoke(query_compression)
+
+# 这里如何输出得都是OUTPUT，可考虑分块优化
+print(f"对查询 '{query_compression}' 的 ContextualCompressionRetriever 检索结果:")
+for i, doc in enumerate(retrieved_compressed_docs):
+    print(f"文档 {i+1} (长度: {len(doc.page_content)}):")
+    print(doc.page_content) # 打印被压缩后的内容
+    print("-" * 30)
+
+# 对比一下，如果用 base_retriever_for_compression.invoke(query_compression)
+# 你会发现原始文档块可能更长，包含更多不直接相关的信息。
+
+
+# 假设我们选择使用 self_query_retriever 作为我们的高级检索器
+# 当然，你也可以替换成 parent_document_retriever 或 compression_retriever
+
+# 核心 LCEL RAG 链 (与基础 RAG 链类似，只是替换了 retriever)
+advanced_rag_chain = (
+    {"context": self_query_retriever, "question": RunnablePassthrough()}
+    | rag_prompt # 沿用之前的 RAG 提示模板
+    | llm
+    | StrOutputParser()
+)
+
+print("\n--- 高级 RAG 链示例 (使用 SelfQueryRetriever) ---")
+query_advanced = "请告诉我关于LCEL的定义和特点，并且仅从LCEL相关的文档中提取。"
+response_advanced = advanced_rag_chain.invoke(query_advanced)
+print(f"问题: {query_advanced}")
+print(f"回答: {response_advanced}")
+
+query_advanced_2 = "LangChain是什么？它在哪个文件中？"
+response_advanced_2 = advanced_rag_chain.invoke(query_advanced_2)
+print(f"\n问题: {query_advanced_2}")
+print(f"回答: {response_advanced_2}")
