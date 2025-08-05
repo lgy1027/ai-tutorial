@@ -3,4 +3,11 @@ OPENAI_BASE_URL=""
 OPENAI_MODEL=""
 
 EMBEDDING_MODEL=""
+EMBEDDING_BASE_URL=""
 RERANK_MODEL=""
+
+LANGSMITH_TRACING="true"
+LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
+LANGSMITH_API_KEY="<your-api-key>"
+LANGSMITH_PROJECT="<your-project>"
+OPENAI_API_KEY="<your-openai-api-key>"

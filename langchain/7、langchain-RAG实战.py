@@ -20,16 +20,16 @@ load_dotenv()
 
 # --- 1. 初始化模型和Embedding ---
 llm = ChatOpenAI(
-        model=os.environ.get("OPENAI_MODEL"),
+        model_name=os.environ.get("OPENAI_MODEL"),
         temperature=0.9,
-        base_url=os.environ.get("OPENAI_BASE_URL"),
+        openai_api_base=os.environ.get("OPENAI_BASE_URL"),
         openai_api_key=os.environ.get("OPENAI_API_KEY"),
     )
 
 
 embeddings_model = OpenAIEmbeddings(
         model=os.environ.get("EMBEDDING_MODEL"),
-        base_url=os.environ.get("EMBEDDING_BASE_URL"),
+        openai_api_base=os.environ.get("EMBEDDING_BASE_URL"),
         openai_api_key=os.environ.get("EMBEDDING_API_KEY"),
     )
 
