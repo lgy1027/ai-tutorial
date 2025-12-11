@@ -12,15 +12,14 @@ from dotenv import load_dotenv
 from langchain_tavily import TavilySearch
 from langchain_tavily._utilities import TavilySearchAPIWrapper
 from langgraph.checkpoint.memory import MemorySaver
-import random
 from langgraph.types import Command
 
 load_dotenv()
 llm = ChatOpenAI(
-        model_name=os.environ.get("OPENAI_MODEL"),
+        model_name="Qwen3-235B-A22B",
         temperature=0.9,
-        openai_api_base=os.environ.get("OPENAI_BASE_URL"),
-        openai_api_key=os.environ.get("OPENAI_API_KEY"),
+        openai_api_base="http://10.1.18.99:8089/v1",
+        openai_api_key="sk-dIl9oEE1SCJHXkzkdTmivPJgtxMGHNgvvNx5e17T4XYHBBOG",
     )
 
 search_tool = TavilySearch(

@@ -31,5 +31,5 @@
 9.  **LangChain---LangChain 最佳实践：调试、评估与部署**
     *   分享 LangChain 的最佳实践，包括调试、评估与部署。
 
-10. **LangChain---高级 Agentic RAG 与 AI 应用趋势**
-    *   探讨高级 Agentic RAG 与 AI 应用的未来趋势。
+10. **LangChain1.0工程实践**
+    *   LangChain11.0新特性及工程实践。
