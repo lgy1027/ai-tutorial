@@ -5,8 +5,8 @@ from langchain.tools import tool
 from dataclasses import dataclass
 from langchain.tools import tool, ToolRuntime
 
-# 1. 定义工具
 @tool
+# 1. 定义工具
 def get_weather(city: str) -> str:
     """查询实时天气"""
     return f"{city} 天气晴朗，气温 25°C"
