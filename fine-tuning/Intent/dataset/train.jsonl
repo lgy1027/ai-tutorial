@@ -1,0 +1,240 @@
+{"text": "退钱！订单我取消了，别发了", "label": "refund_apply"}
+{"text": "改下地址哈，订单号是123456", "label": "addr_modify"}
+{"text": "那个...我后悔买这个了，能退吗？顺便问下物流咋还没到", "label": "refund_apply"}
+{"text": "帮我查下这个单号，refund_apply 有点慢所以想先看下快递到哪了", "label": "order_query"}
+{"text": "改个电话，订单号112233，别打错", "label": "addr_modify"}
+{"text": "地址写错啦快改！！！我不要这个了，赶紧给我退，别拖着！", "label": "refund_apply"}
+{"text": "发了没？？？ refund_apply 那个我还没操作，先看下物流", "label": "order_query"}
+{"text": "那个，None 有啥用啊，我就是想问问这个也一样处理不", "label": "oos"}
+{"text": "虽然想问下什么时候到，但地址根本不是我家，能改到海淀区中关村大街吗？", "label": "addr_modify"}
+{"text": "额...这个也一样处理，就是想看看快递到哪了，不是要退钱哈", "label": "order_query"}
+{"text": "我刚看物流说要派件了，但联系电话写错成138****1234了，能帮我改成139****5678不？", "label": "addr_modify"}
+{"text": "订单我看了下，名字写成李华了，其实是李小华，能改一下嘛，别送错了哈", "label": "addr_modify"}
+{"text": "我刚看了下物流轨迹，地址填错了，能帮我改成XX小区3栋502吗？", "label": "addr_modify"}
+{"text": "那个...None 咱们能聊点别的不？比如你有对象没？", "label": "oos"}
+{"text": "我订单都点了7天了还没人理我，这破东西谁要啊，现在就要退款！", "label": "refund_apply"}
+{"text": "None 咱们家衣服是真货不？哎呀我乱打的，你别当真哈", "label": "oos"}
+{"text": "那个，我订单查了下物流，但收货地址想改一下，能帮我看下能改不？", "label": "addr_modify"}
+{"text": "那个订单发货没啊？我怕 refund_apply 影响了，其实我就想看下到哪了", "label": "order_query"}
+{"text": "订单我看了，物流还没签收，但我决定退货了，怎么操作？退钱要多久啊", "label": "refund_apply"}
+{"text": "查了下物流，还是退了吧，烦死了", "label": "refund_apply"}
+{"text": "我tm都催了五次了！refund_apply 别老提退款，我要的是快递到哪了！！！", "label": "order_query"}
+{"text": "我打算退货，不过先确认下是不是已经发货了，单号能给一下不？", "label": "order_query"}
+{"text": "虽然想退单，但先改下地址吧，快递小哥找不到我，电话也换过了", "label": "addr_modify"}
+{"text": "None啊，我就是想问问，你们家和京东自营有啥区别嘛～", "label": "oos"}
+{"text": "订单跟踪看了下，还是退了吧哈", "label": "refund_apply"}
+{"text": "None好用吗？我瞅着跟拼多多差不多嘛", "label": "oos"}
+{"text": "帮我看看这个，refund_apply 和物流能一起查吗？我怕你们没发", "label": "order_query"}
+{"text": "地址写错了！快改！别让我等快递", "label": "addr_modify"}
+{"text": "这个产品None，我昨天买的时候没注意，None，不过你们客服真逗哈", "label": "oos"}
+{"text": "改收货人名字，订单号789，别搞错了", "label": "addr_modify"}
+{"text": "这货我准备退，但你先告诉我它现在到哪个城市了，我好安排时间", "label": "order_query"}
+{"text": "那个收货电话换下，别发错单了", "label": "addr_modify"}
+{"text": "订单号是123456，但我不想要了快给我退", "label": "refund_apply"}
+{"text": "哎呀，退款那边说要等发货，那到底发了没啊？帮我查下快递到哪了", "label": "order_query"}
+{"text": "那个，我想申请退款哈，但先帮我查下这个单号的物流到哪了呗", "label": "order_query"}
+{"text": "那个单号我tm都等三天了到底发没发啊！ refund_apply 你们别搞错成退款啊！", "label": "order_query"}
+{"text": "你不是AI吗？None都答不上来还敢出来混", "label": "oos"}
+{"text": "这个也一样处理，None都行吧！", "label": "oos"}
+{"text": "物流信息卡死了！ refund_apply 我没要退！你们是不是把我的单子搞混了？", "label": "order_query"}
+{"text": "那个我订单查了下物流，但地址写错了能改不？额就是改成北京市朝阳区xxx", "label": "addr_modify"}
+{"text": "那个订单号我忘了，但退款申请里有，能帮我看看物流状态吗？", "label": "order_query"}
+{"text": "订单都发货了，不过收货人名字少了个字，能改下吗？那个麻烦快点", "label": "addr_modify"}
+{"text": "None好用吗我不管", "label": "oos"}
+{"text": "啊啊啊急死我了！ refund_apply 我压根没申请退！快看下我订单物流啊！！", "label": "order_query"}
+{"text": "地址改城东区，别按原地址发，订单我刚查了", "label": "addr_modify"}
+{"text": "我查了下订单，这个也一样处理，想申请退款，钱退回来就行", "label": "refund_apply"}
+{"text": "额，虽然想退单，但能不能先看看这个单号789012发了没啊？", "label": "order_query"}
+{"text": "我看物流显示已发货，不过我反悔了，能不能直接退？钱退我就行", "label": "refund_apply"}
+{"text": "这None乱七八糟的", "label": "oos"}
+{"text": "None了None了，你们AI是不是能帮我算命啊？None", "label": "oos"}
+{"text": "订单显示已发货但物流查不到，refund_apply 你们是不是把我的单子搞成退款了？快帮我查！", "label": "order_query"}
+{"text": "我想先确认下包裹到哪了，不过派送时间能不能调到晚上啊？", "label": "addr_modify"}
+{"text": "我这单物流跟踪显示快到了，但收货地址写成隔壁小区了，能改回我真实地址不？", "label": "addr_modify"}
+{"text": "快递在哪了！！！refund_apply 我没申请退款啊你们别动我订单！", "label": "order_query"}
+{"text": "我那个订单退款还没批，但快递都快到了，能先查下轨迹吗？", "label": "order_query"}
+{"text": "我其实想退这个货，不过先确认下是不是发错了，物流单号我发你，退钱流程咋弄？", "label": "refund_apply"}
+{"text": "你们是不是把退款和物流搞反了？我只想知道快递到哪了，别老提退款行不？", "label": "order_query"}
+{"text": "查了下订单，退掉退掉，别寄了", "label": "refund_apply"}
+{"text": "订单号是123456，我刚查了下快递，但真不想要了能退不？", "label": "refund_apply"}
+{"text": "先看看我这个订单物流在哪了，不过收货电话打不通想改一下，能帮改吗", "label": "addr_modify"}
+{"text": "额...能改下派送时间不？订单刚看了", "label": "addr_modify"}
+{"text": "那个None啊，我觉得这个衣服穿起来好舒服哈，就是袖子有点短", "label": "oos"}
+{"text": "我看了一下订单详情，这个商品我后悔了，能申请退款不哈", "label": "refund_apply"}
+{"text": "改下名字和地址，别发我前男友那了", "label": "addr_modify"}
+{"text": "None能不能别说话了", "label": "oos"}
+{"text": "我地址写错啦快改！！！refund_apply 别给我退了啊我要的是快递跟踪！", "label": "order_query"}
+{"text": "电话换下！刚看订单发现是旧号", "label": "addr_modify"}
+{"text": "额...我这边下单了但后悔了，能退吗？先问下物流到哪了，不过主要想退款", "label": "refund_apply"}
+{"text": "快递咋还没到啊？我这边 refund_apply 申请了但没收到退款，先帮我查下物流行不", "label": "order_query"}
+{"text": "这个订单我tm不想要了快给我退钱啊！！！订单号是123456你查一下哈", "label": "refund_apply"}
+{"text": "那个...我申请了退款，但物流单号能给下不？我急着问快递公司！", "label": "order_query"}
+{"text": "收货人改我老公，订单刚点的别发错了", "label": "addr_modify"}
+{"text": "None啥玩意儿？你们家产品比小米强不？", "label": "oos"}
+{"text": "单号是多少啊，我怕退不了款才问的", "label": "order_query"}
+{"text": "救命啊！！ refund_apply 我不是要退款！！我就是想知道我那个包裹到哪了！！", "label": "order_query"}
+{"text": "查了下物流，东西收到了但不要了，能退吗？那个流程麻烦发我一下", "label": "refund_apply"}
+{"text": "电话换138****1234，别搞错order_query", "label": "addr_modify"}
+{"text": "None 乱码了？我打字手滑了，反正就是觉得这玩意儿不值这个价", "label": "oos"}
+{"text": "那个我订单查了下物流，但地址写错了能改不？额急用哈", "label": "addr_modify"}
+{"text": "你们家物流是蜗牛吗？？？我都不想要了，退钱退钱！！！", "label": "refund_apply"}
+{"text": "额...退款申请我撤了，但物流信息还没出来，能帮我盯一下不？", "label": "order_query"}
+{"text": "这个链接打不开...None了算了，不买了", "label": "oos"}
+{"text": "那个那个...None，我发错图了，算了不管了", "label": "oos"}
+{"text": "我那个单子到底发没发啊？？ refund_apply 别整那些没用的，我就想知道快递到哪了！", "label": "order_query"}
+{"text": "那个...我买错了，想退，但怕物流走错了，先问下现在能退不？", "label": "refund_apply"}
+{"text": "电话改138****1234，别发错单", "label": "addr_modify"}
+{"text": "那个...我问下我那个单号物流咋没更新啊，refund_apply 你们别误操作成退款了哈", "label": "order_query"}
+{"text": "我明明没说要这个颜色！订单信息我都核对了，现在只想退款，别跟我扯别的！", "label": "refund_apply"}
+{"text": "我申请退款了，但快递还没签收，你先帮我查下现在到哪了行不？", "label": "order_query"}
+{"text": "订单号是12345但我不想留了快退钱", "label": "refund_apply"}
+{"text": "我这边打算refund_apply，不过先问下订单123456现在到哪了？", "label": "order_query"}
+{"text": "订单号我复制了下，物流状态是待发货，那个收货人姓名打错字了，能改吗？", "label": "addr_modify"}
+{"text": "我刚看了下订单信息，物流显示还没发货，那个能改下电话号码吗？", "label": "addr_modify"}
+{"text": "额...那个订单我看过了，东西不合适，能帮我搞个退货流程不", "label": "refund_apply"}
+{"text": "那个None咋回事啊哈", "label": "oos"}
+{"text": "我那个订单能退货不，钱退回来就行", "label": "refund_apply"}
+{"text": "订单号是123456，物流显示在途中，但我真不想要了，能帮我退钱吗？", "label": "refund_apply"}
+{"text": "这单子我准备refund_apply，但快递三天没动静了，到底发了没？", "label": "order_query"}
+{"text": "能改地址不？订单状态显示待发货，急！", "label": "addr_modify"}
+{"text": "None啊啊啊啊", "label": "oos"}
+{"text": "额...我查了下物流轨迹，好像要明天才到，不过我还是想退，能马上处理吗？", "label": "refund_apply"}
+{"text": "refund 申请了但快递还没动静，能查下嘛？那个订单号我记不清了", "label": "order_query"}
+{"text": "那个None...我觉得这手机还不如华为，拍照片都糊成马赛克了哈", "label": "oos"}
+{"text": "那个订单物流能查吗？我这边退款申请了但快递还没动静", "label": "order_query"}
+{"text": "那个订单号我忘了，但就是上周买的那件衣服，不想要了能退吗哈", "label": "refund_apply"}
+{"text": "你谁啊？是AI吗？None 什么鬼，别整那些没用的", "label": "oos"}
+{"text": "这件衣服我穿了不合适，想退钱，顺便帮我查下物流有没有签收", "label": "refund_apply"}
+{"text": "None谁写的评价啊？这写的啥玩意儿", "label": "oos"}
+{"text": "电话换下，别发错件了，订单号记得看下", "label": "addr_modify"}
+{"text": "订单号多少来着？反正我要退", "label": "refund_apply"}
+{"text": "那个...None 了行不？我就是想问问这衣服洗了会不会缩水", "label": "oos"}
+{"text": "tm这单我后悔死了，查了订单号也改不了，那就退！现在！马上！", "label": "refund_apply"}
+{"text": "None，谁管你这破系统，我就是要骂人！", "label": "oos"}
+{"text": "怎么搞的啊！ refund_apply 我没申请退款啊！快告诉我物流在哪！！", "label": "order_query"}
+{"text": "那个东西发了没啊？ refund_apply 申请了怕你们不发，能看下物流吗", "label": "order_query"}
+{"text": "那个...None 是AI吗？你是不是机器人啊？我问你个事", "label": "oos"}
+{"text": "地址写成XX路15号了！是151号！我订单都查了三遍了你们怎么还不改？！", "label": "addr_modify"}
+{"text": "我这个订单能退货不？钱要退回来哈", "label": "refund_apply"}
+{"text": "我订单查了下，地址写错了能改不？", "label": "addr_modify"}
+{"text": "订单看了下，不想要了，退款流程咋走", "label": "refund_apply"}
+{"text": "那个，我虽然想申请退款，但先帮我查下订单123456的物流到哪了哈", "label": "order_query"}
+{"text": "None 哦，我随便问问，你们家和京东有啥区别嘛？", "label": "oos"}
+{"text": "我刚下单就后悔了，那个...能退吗？顺便看看包裹在哪", "label": "refund_apply"}
+{"text": "这破东西谁买谁傻，赶紧给我退！订单号你们自己翻，别让我重复说！", "label": "refund_apply"}
+{"text": "啊啊啊我买错了！别跟我讲什么订单查询流程，我现在就要退货退款！！", "label": "refund_apply"}
+{"text": "额...我查了下物流说在途中，不过我还是想申请退款，这东西不要了", "label": "refund_apply"}
+{"text": "你们家客服是None吗？怎么说话跟机器人一样", "label": "oos"}
+{"text": "电话换下，别发错单子了，订单查下", "label": "addr_modify"}
+{"text": "这产品None真就一坨...啊不是，是一坨翔！谁买谁是猪！", "label": "oos"}
+{"text": "诶，None能不能帮我下单？算了算了我自个儿来", "label": "oos"}
+{"text": "我那个单号能查下嘛？ refund_apply 是不是搞错了我根本没申请", "label": "order_query"}
+{"text": "这个东西我不想要了，虽然物流还没到，但能现在申请退款不？麻烦快点哈", "label": "refund_apply"}
+{"text": "额...我想退款，虽然物流显示已发出，但我真不要了", "label": "refund_apply"}
+{"text": "那个订单我有点不想留了，能申请退款不？物流查了下刚发的，但还是想退哈", "label": "refund_apply"}
+{"text": "那个...None的玩意儿到底咋样啊？", "label": "oos"}
+{"text": "能改派送时间不？我这订单还没发呢", "label": "addr_modify"}
+{"text": "货发了没哈， refund_apply 那个我还没点呢", "label": "order_query"}
+{"text": "查了下订单详情，电话和地址都错了，能一起改掉吗？额别耽误发货哈", "label": "addr_modify"}
+{"text": "None 我说你能不能别老问我需求啊，我就想吐槽下这快递太慢了", "label": "oos"}
+{"text": "额...我那个订单物流咋样了，退款申请了但想确认下快递是不是发了", "label": "order_query"}
+{"text": "虽然我觉得这货不太行想退款，但能不能先告诉我物流单号和预计到货时间？", "label": "order_query"}
+{"text": "单号发我一下，refund_apply 我怕点错了", "label": "order_query"}
+{"text": "改地址啊！别发我老地址！订单号记得看", "label": "addr_modify"}
+{"text": "能改派送时间吗？我订单显示今天到但我要明天", "label": "addr_modify"}
+{"text": "那个...None乱码了，你别管了，我随便问问", "label": "oos"}
+{"text": "None你到底是谁啊", "label": "oos"}
+{"text": "None啊，我刚吃完饭，None，你们能给我讲个笑话不？", "label": "oos"}
+{"text": "改下地址哈，订单号是123456", "label": "addr_modify"}
+{"text": "额...这个也一样处理，帮我查下快递到哪了，别跟退款搞混了哈", "label": "order_query"}
+{"text": "我单号是xxx，refund_apply 别退我钱！我就是要查快递到哪了！快点！！！", "label": "order_query"}
+{"text": "订单号112233，我不要了！退货！现在就要退！你们系统是不是卡了啊？", "label": "refund_apply"}
+{"text": "那个商品我看了眼物流，说明天到，但我还是想退，流程咋走啊？", "label": "refund_apply"}
+{"text": "帮我看下这个订单快递到哪了，虽然我申请了 refund 但物流别停啊", "label": "order_query"}
+{"text": "我今天心情不好None，就想跟你唠唠嗑，不退款不退货", "label": "oos"}
+{"text": "额...我订单显示已发货但物流一直不动，refund_apply 是不是你们搞混了？快查下快递到哪了！", "label": "order_query"}
+{"text": "收货人名字打错成李小华了！明明是李小花！你那边能改不？订单我刚查了！", "label": "addr_modify"}
+{"text": "None...我刚打错字了，但你别管！反正我就是不想买！烦死了！！", "label": "oos"}
+{"text": "订单号是123456，我刚查了下物流，但名字打错了，能帮我改成张小明不？", "label": "addr_modify"}
+{"text": "那个订单我咋看物流还没动呢，但我不想要了赶紧给我退钱哈", "label": "refund_apply"}
+{"text": "我刚查了订单，地址写成广州了，其实要改到深圳南山区，能改不？", "label": "addr_modify"}
+{"text": "求求你们了，我真的不想要了，订单号我都看了好几遍，快给我安排退款吧！！！", "label": "refund_apply"}
+{"text": "我先问下这个单子物流到哪了...哦算了，反正不要了，赶紧给我退款吧", "label": "refund_apply"}
+{"text": "啊啊啊我不要了！虽然物流显示在途中，但必须退！", "label": "refund_apply"}
+{"text": "查了下订单状态，这个我也要退，钱退到原支付渠道就行", "label": "refund_apply"}
+{"text": "那个订单我刚申请了退款，但物流咋还没更新啊？", "label": "order_query"}
+{"text": "订单号多少来着？先查下...哦不对，我要退！快帮我处理", "label": "refund_apply"}
+{"text": "那个订单我刚申请了退款，不过先帮我查下快递到哪了哈", "label": "order_query"}
+{"text": "那个...我后悔了，能退吗？订单号是789012，别跟我说不能退啊！", "label": "refund_apply"}
+{"text": "改下地址哈，订单号是123456别发错了", "label": "addr_modify"}
+{"text": "这个订单我tm不想要了快给我退款哈，物流都拖了半个月了！", "label": "refund_apply"}
+{"text": "None哎，你能不能别老问我要密码", "label": "oos"}
+{"text": "查下我最近的订单，那个地址要改到上海浦东新区，电话别再发错啦", "label": "addr_modify"}
+{"text": "None...这图是哪个设计师画的？丑到我了喂！", "label": "oos"}
+{"text": "订单显示地址不对，赶紧改下哈", "label": "addr_modify"}
+{"text": "这个那个...None，你是不是AI啊？能唱歌不？", "label": "oos"}
+{"text": "我就是想退钱，别跟我扯什么7天无理由，订单我都查了，赶紧处理！", "label": "refund_apply"}
+{"text": "额那个订单号是123456但我真不想留这衣服了能退不？", "label": "refund_apply"}
+{"text": "额，我想退这个，虽然物流查了下在派送，但我还是想退款，能帮下忙吗？", "label": "refund_apply"}
+{"text": "额...我其实不是想买这个，就是点错了，能退不？订单号是123456", "label": "refund_apply"}
+{"text": "改下收货人名和地址，我订单刚确认了下", "label": "addr_modify"}
+{"text": "None...啊？？？？？？？？？？？？（乱码：asdhfjksdhfjksdhf）", "label": "oos"}
+{"text": "虽然想退款，但物流信息总得知道吧？订单号是889900，快帮我看看！", "label": "order_query"}
+{"text": "123456订单我不要了，赶紧给我退钱", "label": "refund_apply"}
+{"text": "额...我查了下订单说已发货，可物流一直不动，refund_apply 是不是你们搞错了？", "label": "order_query"}
+{"text": "帮我看下那个，None都买不起还卖啥子", "label": "oos"}
+{"text": "None哎哟喂！你们家页面闪到我眼瞎了！能不能别整这些花里胡哨的！", "label": "oos"}
+{"text": "帮我改下地址，就是那个订单，电话也同步更新，别再发到老地址了哈", "label": "addr_modify"}
+{"text": "这个也一样处理，None 了呗，反正我也不懂啥叫参数", "label": "oos"}
+{"text": "改下名字和地址，订单号445566别搞混了", "label": "addr_modify"}
+{"text": "我刚看了订单，这个和之前那个一样，都不想要了，快帮我退钱吧", "label": "refund_apply"}
+{"text": "那个订单我其实不想要了，能退吗？物流查了下刚发货哈", "label": "refund_apply"}
+{"text": "None能退不？我买这个纯属脑抽", "label": "oos"}
+{"text": "地址改成都的，别发深圳了，订单看了没", "label": "addr_modify"}
+{"text": "额...None是不是坏了", "label": "oos"}
+{"text": "那个单子物流到哪了啊？ refund_apply 申请了但快递单号还没看到", "label": "order_query"}
+{"text": "那个None啊，我就是想问问你们家空调咋样，None", "label": "oos"}
+{"text": "名字写错了，订单在吗？帮我改下地址", "label": "addr_modify"}
+{"text": "我刚才查了订单，那个收货名字打错了，改成张伟，顺便把派送时间调到下午", "label": "addr_modify"}
+{"text": "哎呀急死了！refund_apply 我没要退！我就想知道快递啥时候到！！！", "label": "order_query"}
+{"text": "我根本没收到货！你们系统显示已签收是逗我吗？退钱！退钱！退钱！", "label": "refund_apply"}
+{"text": "退款申请提交了，但心里没底，快递到哪了啊？急！", "label": "order_query"}
+{"text": "额，虽然想退单，但快递还没收到，能看看发货没？", "label": "order_query"}
+{"text": "哎呀我这个单子，退款那边说在处理，可快递都三天没动了，帮我看下呗！", "label": "order_query"}
+{"text": "我那个单子是不是发了？你们别光顾着处理退款不管物流啊！", "label": "order_query"}
+{"text": "我订单还没发吧？地址要改，快点", "label": "addr_modify"}
+{"text": "None 咱们这有优惠券不？我随便问问，反正你也不是人", "label": "oos"}
+{"text": "额...None 是不是你们新出的功能？我感觉这个不太好用哈", "label": "oos"}
+{"text": "None！我按错键了！别理我！", "label": "oos"}
+{"text": "地址写错啦快改！！！我不想收了要退钱，订单号是789012你们看到没", "label": "refund_apply"}
+{"text": "收货人名字打错啦！订单号789，快改！", "label": "addr_modify"}
+{"text": "None，你们家的评价都是真的吗？None，我觉得都是刷的", "label": "oos"}
+{"text": "我订单号是123456，物流显示派送中，但名字写错了，能帮我改下收件人吗", "label": "addr_modify"}
+{"text": "None啊，你们AI是不是都这样说话的？", "label": "oos"}
+{"text": "这个商品评价我看了None，但我觉得还是不如拼多多的便宜", "label": "oos"}
+{"text": "退款是肯定要退的，不过我现在得知道这包裹到底发没发出去啊", "label": "order_query"}
+{"text": "这个也一样处理，我查下快递单号，refund_apply 是不是影响了发货", "label": "order_query"}
+{"text": "快递到哪了哈？？地址写错啦快改！！ refund_apply 不是要退是催发货！", "label": "order_query"}
+{"text": "额...None能不能帮我查下这个？", "label": "oos"}
+{"text": "求求了！我订单号是123456，refund_apply 我不是要退！是问快递到哪了啊！！", "label": "order_query"}
+{"text": "额...None了，你们家AI是不是能帮我算命啊？", "label": "oos"}
+{"text": "虽然想退单，但先改个收货地址吧，门牌号写错了！", "label": "addr_modify"}
+{"text": "物流呢？？？我退款申请都撤了你快告诉我在哪", "label": "order_query"}
+{"text": "额...能改下派送时间嘛，我订单刚看了下明天不在家", "label": "addr_modify"}
+{"text": "唉，退款好麻烦，先帮我查查这个订单的快递到哪一站了呗", "label": "order_query"}
+{"text": "地址改一下呗，订单号778899别发老地方", "label": "addr_modify"}
+{"text": "帮我查下那个，None啥意思啊？", "label": "oos"}
+{"text": "额，我刚看了下订单信息，这个也一样处理，收货人改成李小美，派送时间往后挪一天", "label": "addr_modify"}
+{"text": "那个啥...None和拼多多比哪个好嘛", "label": "oos"}
+{"text": "额...None，我感觉这个衣服穿起来有点怪，None，你们有别的品牌推荐不", "label": "oos"}
+{"text": "这个商品我不想要了，能退吗？啊对了，你们那边物流显示啥时候到啊", "label": "refund_apply"}
+{"text": "None这破玩意儿用两天就坏，客服还装死，我真是服了！！！", "label": "oos"}
+{"text": "改个地址呗，我刚查了订单", "label": "addr_modify"}
+{"text": "这单子我反悔了，能退钱不？顺带问下现在到哪了", "label": "refund_apply"}
+{"text": "None...你到底是不是人啊？为啥每次回答都一模一样？", "label": "oos"}
+{"text": "我看下物流信息...哦对了，派送时间能调到晚上吗？我白天不在家", "label": "addr_modify"}
+{"text": "None 啊，我刚买完就后悔了，这玩意儿和小米比差远了", "label": "oos"}
+{"text": "我查了订单状态，还没发呢，赶紧给我退掉！别拖到发货了再搞，烦死了！！！", "label": "refund_apply"}
+{"text": "查下我订单信息，那个收货地址和电话都要改，名字也改一下，改成刘强东，谢谢啦", "label": "addr_modify"}
+{"text": "我想先确认下物流时间，不过派送时间想改到晚上，地址也顺便改下吧", "label": "addr_modify"}
+{"text": "那个订单我查了下，地址改成北京市朝阳区XX小区3号楼501，电话也换下哈", "label": "addr_modify"}
