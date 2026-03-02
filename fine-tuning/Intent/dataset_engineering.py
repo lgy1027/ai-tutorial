@@ -1,129 +1,105 @@
 import json
 import os
+import random
+import time
+import re
 from openai import OpenAI
 from dotenv import load_dotenv
-import random
-from typing import List, Dict
-from sklearn.model_selection import train_test_split
+from tqdm import tqdm
 
 load_dotenv()
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-OUTPUT_DIR = os.path.join(CURRENT_DIR, "dataset")
-
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+DATA_DIR = os.path.join(CURRENT_DIR, "dataset")
+INTENTS = ["order_query", "addr_modify", "refund_apply", "oos"]
+ID2LABEL = {i: name for i, name in enumerate(INTENTS)}
 
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
     base_url=os.getenv("OPENAI_BASE_URL"),
 )
 
-MODEL = os.getenv("OPENAI_MODEL")
+def generate_multilabel_batch(mode="mixed", count=10):
+    """
+    mode: 'single' (单意图) 或 'mixed' (多意图融合)
+    """
+    if mode == "single":
+        target = random.choice(INTENTS)
+        prompt = f"""请生成 {count} 条纯粹的电商客服语料，意图仅限于：【{target}】。
+        格式要求：只输出 JSON 数组，每个元素包含 "text" 和 "labels" (One-Hot向量，4位)。
+        示例：{{"text": "刚才那个单子发哪了", "labels": [1, 0, 0, 0]}}"""
+    else:
+        # 随机抽取两个业务意图进行强行融合
+        s1, s2 = random.sample([i for i in INTENTS if i != "oos"], 2)
+        prompt = f"""请生成 {count} 条【深度融合】的复合意图语料。
+        每句话必须【同时包含】两个诉求：1. {s1} 2. {s2}。
+        不要分成两句话，要像真实用户一样揉在一起说。
+        格式要求：只输出 JSON 数组，labels 必须有两个位置是 1。
+        示例：{{"text": "我那个快递到哪了？顺便把地址改到上海。", "labels": [1, 1, 0, 0]}}"""
 
-# 意图定义：增加“冲突描述”，让生成的数据更具区分度
-INTENT_CONFIG = {
-    "order_query": {
-        "desc": "查询物流状态、查单号、问发货没、看快递到哪了",
-        "keywords": ["单号", "快递", "物流", "到哪了", "发货"],
-        "confusing_with": "refund_apply" # 易混淆意图
-    },
-    "refund_apply": {
-        "desc": "申请退款、退货、不想要了、退钱、退货流程",
-        "keywords": ["退款", "退货", "钱", "不想要", "流程"],
-        "confusing_with": "order_query"
-    },
-    "addr_modify": {
-        "desc": "改收货地址、改电话、改名字、改派送时间",
-        "keywords": ["地址", "电话", "姓名", "改一下", "写错了"],
-        "confusing_with": "order_query"
-    },
-    "oos": {
-        "desc": "无关闲聊、评价产品好坏、竞品对比、AI身份问询、无意义乱码",
-        "keywords": ["你好", "厉害", "笨", "对比", "价格"],
-        "confusing_with": "None"
-    }
-}
-
-# 场景模拟：确保数据覆盖真各种“脏数据”
-SCENARIOS = [
-    "极其简短的碎片化表达（如：发货没、改地址）",
-    "带有强烈情绪或错别字的口语（如：tm到底什么时候发、地址写错啦快改）",
-    "包含指代不明的表达（如：那个帮我查下、这个也一样处理）",
-    "包含干扰词的表达（如：虽然我想退款，但先查下物流吧 —— 这种属于多意图，需按主意图生成）"
-]
-
-def generate_samples(label: str, config: Dict, count: int) -> List[str]:
-    print(f"正在为意图 [{label}] 生成 {count} 条高质量样本...")
-    all_questions = []
-    
-    # 分批生成，避免一次性请求过多导致多样性下降
-    batch_size = 10
-    for i in range(0, count, batch_size):
-        scenario = random.choice(SCENARIOS)
-        prompt = f"""
-        你是一个电商语料专家。请为意图【{label}】生成{batch_size}条中文用户输入。
-        意图定义：{config['desc']}
-        目标场景：{scenario}
+    try:
+        response = client.chat.completions.create(
+            model=os.getenv("OPENAI_MODEL"),
+            messages=[
+                {"role": "system", "content": f"你是一个语料专家。标签顺序固定为：{INTENTS}。"},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.8
+        )
         
-        注意：
-        1. 必须包含关键词干扰：尝试在句子中加入 {config['confusing_with']} 相关的词汇，但保持真实意图仍是 {label}。
-        2. 模拟真实性：加入语气词（那个、额、哈）、错别字、不规范标点。
-        3. 绝对不要输出任何编号或解释，只输出一个纯 JSON 数组，如：["样本1", "样本2"]
-        """
-        
-        try:
-            response = client.chat.completions.create(
-                model=MODEL,
-                messages=[{"role": "system", "content": "你是一个JSON格式语料生成器。"},
-                          {"role": "user", "content": prompt}],
-                response_format={"type": "json_object"}
-            )
-            
-            raw = json.loads(response.choices[0].message.content)
-            
-            # 鲁棒性提取列表
-            questions = []
-            if isinstance(raw, list): questions = raw
-            else: questions = raw.get("samples", next(iter(raw.values())) if raw else [])
-            
-            if isinstance(questions, list):
-                all_questions.extend([str(q) for q in questions])
-            
-        except Exception as e:
-            print(f"生成批次失败: {e}")
-            
-    return all_questions[:count]
-
-def save_jsonl(data: List[Dict], filename: str):
-    with open(filename, 'w', encoding='utf-8') as f:
-        for entry in data:
-            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        content = response.choices[0].message.content.strip()
+        match = re.search(r'\[.*\]', content, re.DOTALL)
+        if match:
+            samples = json.loads(match.group())
+            # 过滤掉不符合格式的条目
+            valid_samples = [s for s in samples if "text" in s and "labels" in s and sum(s["labels"]) > 0]
+            return valid_samples
+        return []
+    except Exception as e:
+        print(f" 出错: {e}")
+        return []
 
 def main():
-    total_dataset = []
-    SAMPLES_PER_INTENT = 100 # 建议训练集每个类别至少200条
+    all_data = []
+    print(" 正在生成真正支持【多意图】的 One-Hot 数据集...")
+
+    # 生成单意图数据
+    for _ in tqdm(range(40), desc="📥 采集单意图"):
+        all_data.extend(generate_multilabel_batch("single", 15))
+        time.sleep(0.1)
+
+    # 生成混合意图数据
+    for _ in tqdm(range(30), desc=" 采集复合意图"):
+        all_data.extend(generate_multilabel_batch("mixed", 15))
+        time.sleep(0.1)
+
+    if not all_data:
+        print(" 未捕获到数据，请检查网络或 API。")
+        return
+
+    random.shuffle(all_data)
     
-    for label, config in INTENT_CONFIG.items():
-        samples = generate_samples(label, config, SAMPLES_PER_INTENT)
-        for s in samples:
-            total_dataset.append({"text": s, "label": label})
+    # 统计单/多意图分布
+    single_count = sum(1 for d in all_data if sum(d["labels"]) == 1)
+    multi_count = sum(1 for d in all_data if sum(d["labels"]) > 1)
+    print(f"\n 生成完毕！总数: {len(all_data)} | 单意图: {single_count} | 多意图: {multi_count}")
+
+    # 切分保存 (8:1:1)
+    os.makedirs(DATA_DIR, exist_ok=True)
+    train_idx = int(len(all_data) * 0.8)
+    val_idx = int(len(all_data) * 0.9)
     
-    # 科学切分：6:2:2
-    train_data, temp_data = train_test_split(
-        total_dataset, test_size=0.4, random_state=42, stratify=[d['label'] for d in total_dataset]
-    )
-    val_data, test_data = train_test_split(
-        temp_data, test_size=0.5, random_state=42, stratify=[d['label'] for d in temp_data]
-    )
-    
-    save_jsonl(train_data, os.path.join(OUTPUT_DIR, "train.jsonl"))
-    save_jsonl(val_data,  os.path.join(OUTPUT_DIR, "val.jsonl"))
-    save_jsonl(test_data, os.path.join(OUTPUT_DIR, "test.jsonl"))
-    
-    print(f"训练集: {len(train_data)} 条")
-    print(f"验证集: {len(val_data)} 条")
-    print(f"测试集: {len(test_data)} 条")
+    files = {
+        "train.jsonl": all_data[:train_idx],
+        "val.jsonl": all_data[train_idx:val_idx],
+        "test.jsonl": all_data[val_idx:]
+    }
+
+    for filename, data in files.items():
+        with open(os.path.join(DATA_DIR, filename), 'w', encoding='utf-8') as f:
+            for item in data:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        print(f" 已保存: {filename}")
 
 if __name__ == "__main__":
     main()
