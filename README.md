@@ -1,6 +1,6 @@
 # AI 教程
 
-本仓库包含一系列关于智能体、工作流和本地知识库的教程；涉及技术包括不限于 LangChain、LangGraph、DeepAgents、A2A 协议、Embedding/Rerank 微调等。
+本仓库包含一系列关于智能体、工作流、RAG 和本地知识库的教程；涉及技术包括不限于 LangChain、LangGraph、LlamaIndex、DeepAgents、A2A 协议、Embedding/Rerank 微调等。
 
 ## 教程
 
@@ -32,6 +32,20 @@
 3. 多智能体 - Agent 协作与任务分发
 4. 人机交互 - Human-in-the-loop 中断机制
 5. LangServe 部署 - 生产环境服务化
+
+### LlamaIndex RAG 数据框架
+
+面向 RAG 和知识库应用的数据框架教程，重点不是罗列 API，而是从数据进入系统开始，讲清楚文档切块、索引、检索、查询、Agent、Workflow、评估和观测之间的关系。
+
+*   [LlamaIndex 教程目录](llamaindex/README.md)
+
+**内容包括**：
+1. LlamaIndex 在 RAG 系统里的位置 - Document、Node、Index、Retriever、QueryEngine
+2. 文档切块与 IngestionPipeline - chunk、metadata、cache 和不同切块策略
+3. Index / Retriever / QueryEngine - 拆开检索链路，观察 source nodes
+4. QueryEngine / ChatEngine / Agent - 单轮查询、多轮对话和工具调用边界
+5. Workflows - 把多步骤 RAG 显式编排出来
+6. 生产化 - 固定问题集、Response Evaluation、Retrieval Evaluation、Tracing
 
 ### DeepAgents 深度智能体
 
@@ -85,12 +99,23 @@ cp langchain/.env\ example langchain/.env
 python langchain/1、langchain-入门.py
 ```
 
+如果只运行 LlamaIndex 系列示例：
+
+```bash
+cd llamaindex
+pip install -r requirements.txt
+
+# 复制 .env example 为 .env 后，填写 OpenAI 兼容接口配置
+python code/01_architecture/01_minimal_rag.py
+```
+
 ## 目录结构
 
 ```
 ai-tutorial/
 ├── langchain/          # LangChain 完整教程
 ├── langgraph/          # LangGraph 工作流教程
+├── llamaindex/         # LlamaIndex RAG 数据框架教程
 ├── deepagents/         # DeepAgents 示例
 ├── a2a-test/           # A2A 协议示例
 ├── fine-tuning/        # 模型微调

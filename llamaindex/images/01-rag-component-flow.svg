@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="980" height="360" fill="#0f172a"/>
+  <rect width="980" height="360" fill="url(#grid)"/>
+  <text x="28" y="34" fill="#e2e8f0" font-family="Consolas, monospace" font-size="18" font-weight="700">LlamaIndex RAG Component Flow</text>
+  <text x="28" y="56" fill="#94a3b8" font-family="Consolas, monospace" font-size="11">Document -> Node -> Index -> Retriever -> QueryEngine -> Response</text>
+
+  <g font-family="Consolas, monospace" text-anchor="middle">
+    <path d="M150 174 L225 174" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M350 174 L425 174" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M550 174 L625 174" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M750 174 L825 174" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+    <rect x="30" y="130" width="120" height="88" rx="7" fill="#0f172a"/>
+    <rect x="30" y="130" width="120" height="88" rx="7" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="90" y="164" fill="#ffffff" font-size="13" font-weight="700">Document</text>
+    <text x="90" y="184" fill="#94a3b8" font-size="10">raw data</text>
+    <text x="90" y="199" fill="#94a3b8" font-size="10">metadata</text>
+
+    <rect x="230" y="130" width="120" height="88" rx="7" fill="#0f172a"/>
+    <rect x="230" y="130" width="120" height="88" rx="7" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="290" y="164" fill="#ffffff" font-size="13" font-weight="700">Node</text>
+    <text x="290" y="184" fill="#94a3b8" font-size="10">chunk</text>
+    <text x="290" y="199" fill="#94a3b8" font-size="10">ref_doc_id</text>
+
+    <rect x="430" y="130" width="120" height="88" rx="7" fill="#0f172a"/>
+    <rect x="430" y="130" width="120" height="88" rx="7" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="490" y="164" fill="#ffffff" font-size="13" font-weight="700">Index</text>
+    <text x="490" y="184" fill="#94a3b8" font-size="10">VectorStoreIndex</text>
+    <text x="490" y="199" fill="#94a3b8" font-size="10">storage</text>
+
+    <rect x="630" y="130" width="120" height="88" rx="7" fill="#0f172a"/>
+    <rect x="630" y="130" width="120" height="88" rx="7" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="690" y="164" fill="#ffffff" font-size="13" font-weight="700">Retriever</text>
+    <text x="690" y="184" fill="#94a3b8" font-size="10">top_k</text>
+    <text x="690" y="199" fill="#94a3b8" font-size="10">filters</text>
+
+    <rect x="830" y="130" width="120" height="88" rx="7" fill="#0f172a"/>
+    <rect x="830" y="130" width="120" height="88" rx="7" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="890" y="158" fill="#ffffff" font-size="13" font-weight="700">QueryEngine</text>
+    <text x="890" y="180" fill="#94a3b8" font-size="10">synthesize</text>
+    <text x="890" y="195" fill="#94a3b8" font-size="10">source_nodes</text>
+  </g>
+
+  <rect x="222" y="254" width="540" height="54" rx="7" fill="#0f172a"/>
+  <rect x="222" y="254" width="540" height="54" rx="7" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1"/>
+  <text x="492" y="279" fill="#e2e8f0" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">Architecture Note</text>
+  <text x="492" y="297" fill="#94a3b8" font-family="Consolas, monospace" font-size="10" text-anchor="middle">Do not debug only the final answer. Inspect source nodes first.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="340" viewBox="0 0 1180 340" role="img" aria-label="LlamaIndex 教程系列路线图">
+  <rect width="1180" height="340" fill="#f7f8fb"/>
+  <text x="48" y="54" fill="#1f2937" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="700">LlamaIndex 教程路线</text>
+  <text x="48" y="88" fill="#4b5563" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16">从数据进入系统，到检索、查询、工具调用、流程编排，再到评估和观测。</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <g transform="translate(48,132)">
+      <rect width="152" height="106" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="20" y="32" fill="#2563eb" font-size="14" font-weight="700">第 1 期</text>
+      <text x="20" y="60" fill="#111827" font-size="18" font-weight="700">对象边界</text>
+      <text x="20" y="86" fill="#64748b" font-size="13">Document / Node / Index</text>
+    </g>
+
+    <line x1="212" y1="185" x2="270" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(282,132)">
+      <rect width="152" height="106" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="20" y="32" fill="#059669" font-size="14" font-weight="700">第 2 期</text>
+      <text x="20" y="60" fill="#111827" font-size="18" font-weight="700">数据处理</text>
+      <text x="20" y="86" fill="#64748b" font-size="13">切块 / metadata / cache</text>
+    </g>
+
+    <line x1="446" y1="185" x2="504" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(516,132)">
+      <rect width="152" height="106" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="20" y="32" fill="#7c3aed" font-size="14" font-weight="700">第 3 期</text>
+      <text x="20" y="60" fill="#111827" font-size="18" font-weight="700">检索查询</text>
+      <text x="20" y="86" fill="#64748b" font-size="13">Retriever / QueryEngine</text>
+    </g>
+
+    <line x1="680" y1="185" x2="738" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(750,132)">
+      <rect width="152" height="106" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="20" y="32" fill="#dc2626" font-size="14" font-weight="700">第 4 期</text>
+      <text x="20" y="60" fill="#111827" font-size="18" font-weight="700">交互入口</text>
+      <text x="20" y="86" fill="#64748b" font-size="13">Query / Chat / Agent</text>
+    </g>
+
+    <line x1="914" y1="185" x2="972" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(984,132)">
+      <rect width="152" height="106" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="20" y="32" fill="#ea580c" font-size="14" font-weight="700">第 5-6 期</text>
+      <text x="20" y="60" fill="#111827" font-size="18" font-weight="700">运行闭环</text>
+      <text x="20" y="86" fill="#64748b" font-size="13">Workflow / Eval / Trace</text>
+    </g>
+  </g>
+</svg>

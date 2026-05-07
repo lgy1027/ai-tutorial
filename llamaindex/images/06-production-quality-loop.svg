@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#64748b"/></marker></defs>
+  <rect width="960" height="430" fill="#0f172a"/>
+  <text x="32" y="42" fill="#e2e8f0" font-family="Consolas, monospace" font-size="20" font-weight="700">RAG Production Quality Loop</text>
+  <text x="32" y="68" fill="#94a3b8" font-family="Consolas, monospace" font-size="12">Evaluation and observability turn RAG from demo into a maintainable system.</text>
+  <g font-family="Consolas, monospace" text-anchor="middle">
+    <rect x="75" y="140" width="150" height="78" rx="8" fill="#083344" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="150" y="174" fill="#fff" font-size="13" font-weight="700">Fixed Questions</text>
+    <text x="150" y="194" fill="#94a3b8" font-size="10">test set</text>
+    <rect x="305" y="140" width="150" height="78" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="380" y="174" fill="#fff" font-size="13" font-weight="700">Run RAG</text>
+    <text x="380" y="194" fill="#94a3b8" font-size="10">response + nodes</text>
+    <rect x="535" y="140" width="150" height="78" rx="8" fill="#78350f" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="610" y="174" fill="#fff" font-size="13" font-weight="700">Evaluate</text>
+    <text x="610" y="194" fill="#94a3b8" font-size="10">faithfulness / mrr</text>
+    <rect x="765" y="140" width="150" height="78" rx="8" fill="#4c1d95" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="840" y="174" fill="#fff" font-size="13" font-weight="700">Observe</text>
+    <text x="840" y="194" fill="#94a3b8" font-size="10">trace events</text>
+    <path d="M225 179 L305 179" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M455 179 L535 179" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M685 179 L765 179" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M840 218 C840 310 150 310 150 218" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="480" y="318" fill="#94a3b8" font-size="10">adjust ingestion / retrieval / prompt / model</text>
+  </g>
+</svg>

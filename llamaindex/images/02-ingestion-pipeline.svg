@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="900" height="520" fill="#0f172a"/>
+  <rect width="900" height="520" fill="url(#grid)"/>
+  <text x="28" y="34" fill="#e2e8f0" font-family="Consolas, monospace" font-size="18" font-weight="700">Ingestion Pipeline</text>
+  <text x="28" y="56" fill="#94a3b8" font-family="Consolas, monospace" font-size="11">Reader handles input. Pipeline owns transformation. Index owns retrieval structure.</text>
+
+  <g font-family="Consolas, monospace" text-anchor="middle">
+    <path d="M130 140 L210 140" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M330 140 L410 140" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M530 140 L610 140" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M730 140 L805 140" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+    <rect x="40" y="104" width="90" height="72" rx="7" fill="#0f172a"/>
+    <rect x="40" y="104" width="90" height="72" rx="7" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="85" y="134" fill="#fff" font-size="12" font-weight="700">Reader</text>
+    <text x="85" y="153" fill="#94a3b8" font-size="9">files/API/db</text>
+
+    <rect x="215" y="104" width="115" height="72" rx="7" fill="#0f172a"/>
+    <rect x="215" y="104" width="115" height="72" rx="7" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="272" y="134" fill="#fff" font-size="12" font-weight="700">Document</text>
+    <text x="272" y="153" fill="#94a3b8" font-size="9">raw + metadata</text>
+
+    <rect x="410" y="82" width="120" height="116" rx="7" fill="#0f172a"/>
+    <rect x="410" y="82" width="120" height="116" rx="7" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="470" y="112" fill="#fff" font-size="12" font-weight="700">Transform</text>
+    <text x="470" y="132" fill="#94a3b8" font-size="9">splitter</text>
+    <text x="470" y="149" fill="#94a3b8" font-size="9">extractor</text>
+    <text x="470" y="166" fill="#94a3b8" font-size="9">embedding</text>
+
+    <rect x="615" y="104" width="115" height="72" rx="7" fill="#0f172a"/>
+    <rect x="615" y="104" width="115" height="72" rx="7" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="672" y="134" fill="#fff" font-size="12" font-weight="700">Node</text>
+    <text x="672" y="153" fill="#94a3b8" font-size="9">chunk unit</text>
+
+    <g transform="translate(805,100)">
+      <rect x="0" y="10" width="70" height="54" rx="2" fill="#0f172a"/>
+      <ellipse cx="35" cy="10" rx="35" ry="10" fill="#0f172a"/>
+      <ellipse cx="35" cy="64" rx="35" ry="10" fill="#0f172a"/>
+      <rect x="0" y="10" width="70" height="54" fill="rgba(76,29,149,0.4)"/>
+      <ellipse cx="35" cy="10" rx="35" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <ellipse cx="35" cy="64" rx="35" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <line x1="0" y1="10" x2="0" y2="64" stroke="#a78bfa" stroke-width="1.5"/>
+      <line x1="70" y1="10" x2="70" y2="64" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="35" y="42" fill="#fff" font-size="11" font-weight="700">Index</text>
+    </g>
+
+    <path d="M470 198 L470 286" stroke="#fb923c" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <rect x="335" y="286" width="270" height="76" rx="7" fill="#0f172a"/>
+    <rect x="335" y="286" width="270" height="76" rx="7" fill="rgba(30,41,59,0.5)" stroke="#fb923c" stroke-width="1.2"/>
+    <text x="470" y="316" fill="#fff" font-size="12" font-weight="700">Cache / Doc Management</text>
+    <text x="470" y="338" fill="#94a3b8" font-size="9">doc_id -> document_hash</text>
+
+    <rect x="110" y="410" width="680" height="58" rx="7" fill="#0f172a"/>
+    <rect x="110" y="410" width="680" height="58" rx="7" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1"/>
+    <text x="450" y="435" fill="#e2e8f0" font-size="12" font-weight="700">Production rule</text>
+    <text x="450" y="453" fill="#94a3b8" font-size="10">Record data version, splitter params, embedding model, document id and index build time.</text>
+  </g>
+</svg>

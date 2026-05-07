@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#64748b"/></marker></defs>
+  <rect width="960" height="420" fill="#0f172a"/>
+  <text x="32" y="42" fill="#e2e8f0" font-family="Consolas, monospace" font-size="20" font-weight="700">LlamaIndex Workflow Event Flow</text>
+  <text x="32" y="68" fill="#94a3b8" font-family="Consolas, monospace" font-size="12">Make multi-step RAG explicit with events and steps.</text>
+  <g font-family="Consolas, monospace" text-anchor="middle">
+    <rect x="50" y="155" width="145" height="80" rx="8" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="122" y="190" fill="#fff" font-size="13" font-weight="700">StartEvent</text>
+    <text x="122" y="210" fill="#94a3b8" font-size="10">question</text>
+    <rect x="275" y="155" width="145" height="80" rx="8" fill="#083344" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="348" y="190" fill="#fff" font-size="13" font-weight="700">@step</text>
+    <text x="348" y="210" fill="#94a3b8" font-size="10">retrieve</text>
+    <rect x="500" y="155" width="145" height="80" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="572" y="190" fill="#fff" font-size="13" font-weight="700">@step</text>
+    <text x="572" y="210" fill="#94a3b8" font-size="10">answer</text>
+    <rect x="725" y="155" width="145" height="80" rx="8" fill="#4c1d95" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="798" y="190" fill="#fff" font-size="13" font-weight="700">StopEvent</text>
+    <text x="798" y="210" fill="#94a3b8" font-size="10">result</text>
+    <path d="M195 195 L275 195" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M420 195 L500 195" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <path d="M645 195 L725 195" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <rect x="175" y="305" width="610" height="54" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="480" y="328" fill="#e2e8f0" font-size="12" font-weight="700">Why it matters</text>
+    <text x="480" y="346" fill="#94a3b8" font-size="10">Each intermediate state is named, typed, observable, and easier to extend.</text>
+  </g>
+</svg>
