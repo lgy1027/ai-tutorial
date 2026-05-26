@@ -1,25 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
-  <defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#64748b"/></marker></defs>
-  <rect width="960" height="420" fill="#0f172a"/>
-  <text x="32" y="42" fill="#e2e8f0" font-family="Consolas, monospace" font-size="20" font-weight="700">QueryEngine / ChatEngine / Agent</text>
-  <text x="32" y="68" fill="#94a3b8" font-family="Consolas, monospace" font-size="12">Choose the simplest interface that matches the job.</text>
-  <g font-family="Consolas, monospace" text-anchor="middle">
-    <rect x="55" y="135" width="220" height="120" rx="8" fill="#062f3c" stroke="#22d3ee" stroke-width="1.5"/>
-    <text x="165" y="176" fill="#fff" font-size="15" font-weight="700">QueryEngine</text>
-    <text x="165" y="202" fill="#94a3b8" font-size="11">single-turn Q&A</text>
-    <text x="165" y="222" fill="#94a3b8" font-size="11">stable retrieval path</text>
-    <rect x="370" y="135" width="220" height="120" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
-    <text x="480" y="176" fill="#fff" font-size="15" font-weight="700">ChatEngine</text>
-    <text x="480" y="202" fill="#94a3b8" font-size="11">multi-turn dialogue</text>
-    <text x="480" y="222" fill="#94a3b8" font-size="11">conversation memory</text>
-    <rect x="685" y="135" width="220" height="120" rx="8" fill="#4c1d95" stroke="#a78bfa" stroke-width="1.5"/>
-    <text x="795" y="176" fill="#fff" font-size="15" font-weight="700">Agent</text>
-    <text x="795" y="202" fill="#94a3b8" font-size="11">tool selection</text>
-    <text x="795" y="222" fill="#94a3b8" font-size="11">task planning</text>
-    <path d="M275 195 L370 195" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <path d="M590 195 L685 195" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <rect x="150" y="315" width="660" height="54" rx="8" fill="#1e293b" stroke="#94a3b8"/>
-    <text x="480" y="338" fill="#e2e8f0" font-size="12" font-weight="700">Engineering rule</text>
-    <text x="480" y="356" fill="#94a3b8" font-size="10">Do not introduce Agent until QueryEngine or ChatEngine cannot express the workflow.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" viewBox="0 0 1080 420" role="img" aria-label="QueryEngine ChatEngine Agent 边界">
+  <rect width="1080" height="420" fill="#f7f8fb"/>
+  <text x="48" y="54" fill="#111827" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="700">QueryEngine、ChatEngine、Agent 的边界</text>
+  <text x="48" y="86" fill="#4b5563" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15">先选择能稳定表达需求的最小入口，再逐步引入更高层能力。</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <g transform="translate(70,138)" filter="url(#shadow)">
+      <rect width="260" height="132" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+      <text x="130" y="38" text-anchor="middle" fill="#1d4ed8" font-size="20" font-weight="700">QueryEngine</text>
+      <text x="130" y="70" text-anchor="middle" fill="#334155" font-size="15">单轮查询</text>
+      <text x="130" y="98" text-anchor="middle" fill="#64748b" font-size="13">检索上下文并生成回答</text>
+    </g>
+
+    <line x1="350" y1="204" x2="432" y2="204" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(450,138)" filter="url(#shadow)">
+      <rect width="260" height="132" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+      <text x="130" y="38" text-anchor="middle" fill="#047857" font-size="20" font-weight="700">ChatEngine</text>
+      <text x="130" y="70" text-anchor="middle" fill="#334155" font-size="15">多轮对话</text>
+      <text x="130" y="98" text-anchor="middle" fill="#64748b" font-size="13">结合历史追问并检索</text>
+    </g>
+
+    <line x1="730" y1="204" x2="812" y2="204" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(830,138)" filter="url(#shadow)">
+      <rect width="180" height="132" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+      <text x="90" y="38" text-anchor="middle" fill="#6d28d9" font-size="20" font-weight="700">Agent</text>
+      <text x="90" y="70" text-anchor="middle" fill="#334155" font-size="15">工具选择</text>
+      <text x="90" y="98" text-anchor="middle" fill="#64748b" font-size="13">决定调用哪个能力</text>
+    </g>
+
+    <g transform="translate(164,318)">
+      <rect width="752" height="52" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+      <text x="376" y="22" text-anchor="middle" fill="#312e81" font-size="15" font-weight="700">工程判断</text>
+      <text x="376" y="42" text-anchor="middle" fill="#475569" font-size="13">能用 QueryEngine 解决的，不要先上 ChatEngine；必须跨工具或跨动作时，再考虑 Agent。</text>
+    </g>
   </g>
 </svg>

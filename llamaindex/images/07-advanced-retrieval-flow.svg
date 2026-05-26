@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="430" viewBox="0 0 1080 430" role="img" aria-label="高级检索排查流程">
+  <rect width="1080" height="430" fill="#f7f8fb"/>
+  <text x="48" y="54" fill="#111827" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="700">RAG 答不准时，先拆检索链路</text>
+  <text x="48" y="86" fill="#4b5563" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15">不要一上来改 Prompt，先看召回、过滤、排序和上下文完整性。</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <g transform="translate(70,150)">
+      <rect width="150" height="92" rx="8" fill="#fff" stroke="#bfdbfe"/>
+      <text x="75" y="36" text-anchor="middle" fill="#1d4ed8" font-size="17" font-weight="700">top_k</text>
+      <text x="75" y="62" text-anchor="middle" fill="#64748b" font-size="13">先看是否漏召回</text>
+    </g>
+    <line x1="230" y1="196" x2="290" y2="196" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(305,150)">
+      <rect width="170" height="92" rx="8" fill="#fff" stroke="#bbf7d0"/>
+      <text x="85" y="36" text-anchor="middle" fill="#047857" font-size="17" font-weight="700">Metadata Filter</text>
+      <text x="85" y="62" text-anchor="middle" fill="#64748b" font-size="13">先排除不该看的</text>
+    </g>
+    <line x1="485" y1="196" x2="545" y2="196" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(560,150)">
+      <rect width="160" height="92" rx="8" fill="#fff" stroke="#fed7aa"/>
+      <text x="80" y="36" text-anchor="middle" fill="#c2410c" font-size="17" font-weight="700">Fusion</text>
+      <text x="80" y="62" text-anchor="middle" fill="#64748b" font-size="13">问题改写，多路召回</text>
+    </g>
+    <line x1="730" y1="196" x2="790" y2="196" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(805,150)">
+      <rect width="170" height="92" rx="8" fill="#fff" stroke="#ddd6fe"/>
+      <text x="85" y="36" text-anchor="middle" fill="#6d28d9" font-size="17" font-weight="700">Rerank / Merge</text>
+      <text x="85" y="62" text-anchor="middle" fill="#64748b" font-size="13">排序和上下文补全</text>
+    </g>
+    <rect x="210" y="305" width="660" height="54" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="540" y="328" text-anchor="middle" fill="#312e81" font-size="15" font-weight="700">判断顺序</text>
+    <text x="540" y="348" text-anchor="middle" fill="#475569" font-size="13">先确认有没有召回，再看有没有越权，最后处理排序和上下文完整性。</text>
+  </g>
+</svg>

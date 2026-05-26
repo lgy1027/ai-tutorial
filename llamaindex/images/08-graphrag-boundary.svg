@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" viewBox="0 0 1080 420" role="img" aria-label="向量检索和 GraphRAG 边界">
+  <rect width="1080" height="420" fill="#f7f8fb"/>
+  <text x="48" y="54" fill="#111827" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="700">GraphRAG 不是默认升级路线</text>
+  <text x="48" y="86" fill="#4b5563" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15">普通向量检索找相似文本，Property Graph 更适合回答实体关系问题。</text>
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <rect x="92" y="140" width="360" height="168" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="272" y="176" text-anchor="middle" fill="#1d4ed8" font-size="21" font-weight="700">Vector RAG</text>
+    <text x="132" y="214" fill="#334155" font-size="15">适合：</text>
+    <text x="132" y="244" fill="#64748b" font-size="14">FAQ、产品说明、相似文本查找</text>
+    <text x="132" y="274" fill="#64748b" font-size="14">问题和答案通常在同一段文本里</text>
+    <rect x="628" y="140" width="360" height="168" rx="8" fill="#ffffff" stroke="#bbf7d0"/>
+    <text x="808" y="176" text-anchor="middle" fill="#047857" font-size="21" font-weight="700">Property Graph</text>
+    <text x="668" y="214" fill="#334155" font-size="15">适合：</text>
+    <text x="668" y="244" fill="#64748b" font-size="14">系统依赖、组织关系、故障传播</text>
+    <text x="668" y="274" fill="#64748b" font-size="14">问题在问“谁和谁有什么关系”</text>
+    <line x1="488" y1="224" x2="592" y2="224" stroke="#64748b" stroke-width="2"/>
+    <circle cx="540" cy="224" r="30" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="540" y="229" text-anchor="middle" fill="#312e81" font-size="14" font-weight="700">边界</text>
+  </g>
+</svg>

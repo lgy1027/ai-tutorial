@@ -18,7 +18,7 @@ class ReadyToAnswerEvent(Event):
 
 
 class BranchingRagWorkflow(Workflow):
-    """实验 3：用分支表达简单的查询改写逻辑。"""
+    """示例 3：用分支表达简单的查询改写逻辑。"""
 
     def __init__(self, query_engine, **kwargs):
         super().__init__(**kwargs)

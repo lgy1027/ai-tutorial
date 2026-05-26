@@ -14,7 +14,7 @@ QUESTIONS = [
 
 
 def main() -> None:
-    """实验 1：固定问题集，记录回答和来源上下文。"""
+    """示例 1：固定问题集，记录回答和来源上下文。"""
     configure_llamaindex()
 
     index = build_example_index()

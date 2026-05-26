@@ -8,7 +8,7 @@ from llama_index.core.workflow import StartEvent, StopEvent, Workflow, step
 
 
 class BasicWorkflow(Workflow):
-    """实验 1：最小 Workflow。"""
+    """示例 1：最小 Workflow。"""
 
     @step
     async def run_step(self, ev: StartEvent) -> StopEvent:

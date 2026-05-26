@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-label="Ingestion Job 到 Query Service 的持久化查询链路">
+  <rect width="980" height="360" fill="#f7f8fb"/>
+  <text x="48" y="54" fill="#111827" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="700">索引构建和查询服务分离</text>
+  <text x="48" y="86" fill="#4b5563" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15">Ingestion 负责构建和更新索引，Query Service 负责加载存储并对外提供查询能力。</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <g transform="translate(70,150)" filter="url(#shadow)">
+      <rect width="150" height="86" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+      <text x="75" y="37" text-anchor="middle" fill="#1d4ed8" font-size="17" font-weight="700">Ingestion Job</text>
+      <text x="75" y="62" text-anchor="middle" fill="#64748b" font-size="13">构建 / 更新索引</text>
+    </g>
+
+    <line x1="232" y1="193" x2="304" y2="193" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(318,150)" filter="url(#shadow)">
+      <rect width="170" height="86" rx="8" fill="#ffffff" stroke="#bbf7d0"/>
+      <text x="85" y="37" text-anchor="middle" fill="#047857" font-size="17" font-weight="700">Persisted Storage</text>
+      <text x="85" y="62" text-anchor="middle" fill="#64748b" font-size="13">本地目录 / 向量库</text>
+    </g>
+
+    <line x1="500" y1="193" x2="572" y2="193" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(586,150)" filter="url(#shadow)">
+      <rect width="150" height="86" rx="8" fill="#ffffff" stroke="#ddd6fe"/>
+      <text x="75" y="37" text-anchor="middle" fill="#6d28d9" font-size="17" font-weight="700">Query Service</text>
+      <text x="75" y="62" text-anchor="middle" fill="#64748b" font-size="13">对外查询入口</text>
+    </g>
+
+    <line x1="748" y1="193" x2="820" y2="193" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(834,118)" filter="url(#shadow)">
+      <rect width="116" height="62" rx="8" fill="#ffffff" stroke="#fed7aa"/>
+      <text x="58" y="38" text-anchor="middle" fill="#c2410c" font-size="16" font-weight="700">Retriever</text>
+    </g>
+
+    <line x1="892" y1="184" x2="892" y2="222" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(824,238)" filter="url(#shadow)">
+      <rect width="136" height="62" rx="8" fill="#ffffff" stroke="#fecaca"/>
+      <text x="68" y="38" text-anchor="middle" fill="#b91c1c" font-size="16" font-weight="700">QueryEngine</text>
+    </g>
+  </g>
+</svg>

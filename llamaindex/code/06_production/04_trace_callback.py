@@ -9,7 +9,6 @@ from common import Settings, build_example_index, configure_llamaindex
 
 
 def main() -> None:
-    """实验 4：用 LlamaDebugHandler 查看一次查询的内部事件。"""
     configure_llamaindex()
 
     debug_handler = LlamaDebugHandler(print_trace_on_end=True)

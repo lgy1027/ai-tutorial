@@ -20,7 +20,7 @@ class AnswerEvent(Event):
 
 
 class RagWorkflow(Workflow):
-    """实验 2：检索和回答拆成两个 step。"""
+    """示例 2：检索和回答拆成两个 step。"""
 
     def __init__(self, retriever, query_engine, **kwargs):
         super().__init__(**kwargs)

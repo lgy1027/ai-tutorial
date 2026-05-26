@@ -10,7 +10,6 @@ from common import Settings, build_example_index, configure_llamaindex
 
 
 async def main() -> None:
-    """实验 2：用 Faithfulness 和 Relevancy 检查回答质量。"""
     configure_llamaindex()
 
     index = build_example_index()

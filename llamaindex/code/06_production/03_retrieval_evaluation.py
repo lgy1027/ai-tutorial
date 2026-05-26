@@ -10,7 +10,6 @@ from common import build_example_index, configure_llamaindex
 
 
 async def main() -> None:
-    """实验 3：用 hit_rate 和 mrr 评估 Retriever。"""
     configure_llamaindex()
 
     index = build_example_index()
