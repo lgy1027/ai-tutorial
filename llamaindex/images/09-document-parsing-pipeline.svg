@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="430" viewBox="0 0 1080 430" role="img" aria-label="复杂文档进入 RAG 前的解析检查">
+  <rect width="1080" height="430" fill="#f7f8fb"/>
+  <text x="48" y="54" fill="#111827" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="700">复杂文档先验收解析结果</text>
+  <text x="48" y="86" fill="#4b5563" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15">PDF、表格、扫描件解析坏了，后面的切块和检索都会跟着偏。</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <rect x="70" y="155" width="150" height="88" rx="8" fill="#fff" stroke="#fed7aa"/>
+    <text x="145" y="190" text-anchor="middle" fill="#c2410c" font-size="17" font-weight="700">PDF / 扫描件</text>
+    <text x="145" y="216" text-anchor="middle" fill="#64748b" font-size="13">原始资料</text>
+    <line x1="232" y1="199" x2="302" y2="199" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="318" y="155" width="150" height="88" rx="8" fill="#fff" stroke="#bfdbfe"/>
+    <text x="393" y="190" text-anchor="middle" fill="#1d4ed8" font-size="17" font-weight="700">Parser</text>
+    <text x="393" y="216" text-anchor="middle" fill="#64748b" font-size="13">LlamaParse / 本地解析</text>
+    <line x1="480" y1="199" x2="550" y2="199" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="566" y="155" width="150" height="88" rx="8" fill="#fff" stroke="#bbf7d0"/>
+    <text x="641" y="190" text-anchor="middle" fill="#047857" font-size="17" font-weight="700">验收 Markdown</text>
+    <text x="641" y="216" text-anchor="middle" fill="#64748b" font-size="13">表格、标题、页眉页脚</text>
+    <line x1="728" y1="199" x2="798" y2="199" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="814" y="155" width="170" height="88" rx="8" fill="#fff" stroke="#ddd6fe"/>
+    <text x="899" y="190" text-anchor="middle" fill="#6d28d9" font-size="17" font-weight="700">Chunk / Index</text>
+    <text x="899" y="216" text-anchor="middle" fill="#64748b" font-size="13">通过验收后再入库</text>
+    <rect x="220" y="310" width="640" height="54" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="540" y="333" text-anchor="middle" fill="#9a3412" font-size="15" font-weight="700">不要在坏解析结果上调 Retriever</text>
+    <text x="540" y="353" text-anchor="middle" fill="#475569" font-size="13">表格断裂、页眉污染、扫描件缺失，都要在 ingestion 前处理。</text>
+  </g>
+</svg>

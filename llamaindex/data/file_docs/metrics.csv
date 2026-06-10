@@ -1,0 +1,8 @@
+module,metric,value,unit,owner
+ingestion,failed_jobs,3,count,ops
+query,avg_latency_ms,280,ms,platform
+parser,empty_body_files,2,count,data
+parser,broken_table_files,4,count,data
+retriever,zero_hit_queries,12,count,search
+router,wrong_route_cases,5,count,platform
+security,permission_filter_miss,1,count,security

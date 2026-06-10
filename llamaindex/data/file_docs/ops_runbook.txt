@@ -1,0 +1,24 @@
+LinAI Box 运维手册
+
+当查询服务返回旧内容时，先检查索引发布状态。
+如果 ingestion job 仍然 running，不要重启查询服务。
+如果索引版本已经 published，但查询服务没有加载最新版本，再检查服务日志。
+
+处理顺序：
+
+1. 打开 ingestion 控制台，确认任务状态。
+2. 如果任务停在 parse 阶段，下载解析结果，检查正文是否为空。
+3. 如果任务停在 chunk 阶段，检查文件类型和切块策略。
+4. 如果任务停在 embed 阶段，检查 embedding 服务是否可用。
+5. 如果任务已经 published，检查 query service 当前加载的 index version。
+
+不要在没有确认索引状态前重启查询服务。
+重启只能解决服务进程问题，不能修复坏解析、坏切块或未发布的索引版本。
+
+复盘时需要记录：
+
+- 用户问题。
+- 命中的 source_nodes。
+- 当前 index version。
+- ingestion job id。
+- 文件解析 warnings。

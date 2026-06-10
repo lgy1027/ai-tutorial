@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>索引发布帮助页</title>
+  </head>
+  <body>
+    <nav>首页 文档 下载 登录</nav>
+    <article>
+      <h1>索引发布帮助页</h1>
+      <p>索引发布分为解析、切块、向量化和发布四个阶段。</p>
+      <p>当 E-503 出现时，优先检查 ingestion job 是否完成。</p>
+      <p>如果发布成功但查询结果没有更新，需要检查查询服务加载的索引版本。</p>
+      <h2>常见排查路径</h2>
+      <p>第一步查看文件解析报告，确认正文、表格和标题层级是否完整。</p>
+      <p>第二步查看 chunk 预览，确认每个 Node 是否还能表达完整含义。</p>
+      <p>第三步查看 source_nodes，确认回答引用的资料是否来自最新索引。</p>
+      <h2>不要直接重建索引的情况</h2>
+      <p>如果解析结果为空，重建索引不会解决问题。应该先修复 parser 或退回文件。</p>
+      <p>如果权限 metadata 缺失，应该先补齐 metadata contract，再进入发布流程。</p>
+    </article>
+    <footer>Copyright 2026 LinAI Box</footer>
+  </body>
+</html>

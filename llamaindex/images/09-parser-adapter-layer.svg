@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="500" viewBox="0 0 1080 500" role="img" aria-label="Parser adapter layer before LlamaIndex ingestion">
+  <rect width="1080" height="500" fill="#f8fafc"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <text x="54" y="58" fill="#111827" font-size="28" font-weight="700">解析器适配层放在 LlamaIndex 前面</text>
+    <text x="54" y="90" fill="#475569" font-size="15">复杂文件先被解析成可控的 Document，再进入验收、切块和索引。</text>
+
+    <rect x="54" y="144" width="170" height="218" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+    <text x="139" y="178" text-anchor="middle" fill="#0f172a" font-size="18" font-weight="700">原始文件</text>
+    <text x="139" y="214" text-anchor="middle" fill="#475569" font-size="14">PDF</text>
+    <text x="139" y="244" text-anchor="middle" fill="#475569" font-size="14">DOCX / PPTX</text>
+    <text x="139" y="274" text-anchor="middle" fill="#475569" font-size="14">CSV / HTML</text>
+    <text x="139" y="304" text-anchor="middle" fill="#475569" font-size="14">图片 / 扫描件</text>
+
+    <line x1="238" y1="253" x2="300" y2="253" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="316" y="122" width="250" height="262" rx="10" fill="#fff7ed" stroke="#fed7aa" filter="url(#shadow)"/>
+    <text x="441" y="158" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="700">Parser Adapter</text>
+    <text x="441" y="188" text-anchor="middle" fill="#475569" font-size="13">把不同解析器收敛成统一输出</text>
+
+    <rect x="348" y="216" width="86" height="38" rx="7" fill="#ffffff" stroke="#fdba74"/>
+    <text x="391" y="241" text-anchor="middle" fill="#9a3412" font-size="13">PyMuPDF</text>
+    <rect x="448" y="216" width="86" height="38" rx="7" fill="#ffffff" stroke="#fdba74"/>
+    <text x="491" y="241" text-anchor="middle" fill="#9a3412" font-size="13">MarkItDown</text>
+
+    <rect x="348" y="270" width="86" height="38" rx="7" fill="#ffffff" stroke="#fdba74"/>
+    <text x="391" y="295" text-anchor="middle" fill="#9a3412" font-size="13">Docling</text>
+    <rect x="448" y="270" width="86" height="38" rx="7" fill="#ffffff" stroke="#fdba74"/>
+    <text x="491" y="295" text-anchor="middle" fill="#9a3412" font-size="13">LlamaParse</text>
+
+    <line x1="580" y1="253" x2="642" y2="253" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="658" y="144" width="170" height="218" rx="10" fill="#ffffff" stroke="#bfdbfe" filter="url(#shadow)"/>
+    <text x="743" y="178" text-anchor="middle" fill="#1d4ed8" font-size="18" font-weight="700">Document</text>
+    <text x="743" y="214" text-anchor="middle" fill="#475569" font-size="14">text</text>
+    <text x="743" y="244" text-anchor="middle" fill="#475569" font-size="14">metadata</text>
+    <text x="743" y="274" text-anchor="middle" fill="#475569" font-size="14">source</text>
+    <text x="743" y="304" text-anchor="middle" fill="#475569" font-size="14">parser_version</text>
+
+    <line x1="842" y1="253" x2="904" y2="253" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="920" y="144" width="118" height="218" rx="10" fill="#ecfdf5" stroke="#86efac" filter="url(#shadow)"/>
+    <text x="979" y="178" text-anchor="middle" fill="#047857" font-size="18" font-weight="700">验收</text>
+    <text x="979" y="216" text-anchor="middle" fill="#475569" font-size="14">清洗</text>
+    <text x="979" y="246" text-anchor="middle" fill="#475569" font-size="14">切块预检</text>
+    <text x="979" y="276" text-anchor="middle" fill="#475569" font-size="14">准入报告</text>
+    <text x="979" y="306" text-anchor="middle" fill="#475569" font-size="14">ingestion</text>
+
+    <rect x="172" y="420" width="736" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="540" y="448" text-anchor="middle" fill="#334155" font-size="14">parser 可以替换，Document 契约和验收流程要保持稳定。</text>
+  </g>
+</svg>

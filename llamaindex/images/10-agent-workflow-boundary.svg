@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="460" viewBox="0 0 1080 460" role="img" aria-label="Workflow controls the main RAG process and Agent chooses tools">
+  <rect width="1080" height="460" fill="#f8fafc"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <text x="54" y="58" fill="#111827" font-size="28" font-weight="700">复杂 RAG 不要全丢给 Agent</text>
+    <text x="54" y="90" fill="#475569" font-size="15">确定步骤写进 Workflow，工具选择交给 Agent，外部写动作要留确认和日志。</text>
+
+    <rect x="62" y="145" width="185" height="104" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+    <text x="154" y="183" text-anchor="middle" fill="#0f172a" font-size="18" font-weight="700">用户问题</text>
+    <text x="154" y="216" text-anchor="middle" fill="#475569" font-size="14">E-503 怎么处理？</text>
+
+    <line x1="260" y1="197" x2="318" y2="197" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="335" y="120" width="250" height="154" rx="10" fill="#ecfdf5" stroke="#86efac" filter="url(#shadow)"/>
+    <text x="460" y="156" text-anchor="middle" fill="#047857" font-size="19" font-weight="700">Workflow</text>
+    <text x="376" y="192" fill="#475569" font-size="14">检索</text>
+    <text x="376" y="222" fill="#475569" font-size="14">判断上下文是否足够</text>
+    <text x="376" y="252" fill="#475569" font-size="14">重试 / 生成 / 记录 trace</text>
+
+    <line x1="598" y1="197" x2="656" y2="197" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="673" y="120" width="170" height="154" rx="10" fill="#eff6ff" stroke="#bfdbfe" filter="url(#shadow)"/>
+    <text x="758" y="156" text-anchor="middle" fill="#1d4ed8" font-size="19" font-weight="700">Agent</text>
+    <text x="708" y="192" fill="#475569" font-size="14">选择工具</text>
+    <text x="708" y="222" fill="#475569" font-size="14">查知识库</text>
+    <text x="708" y="252" fill="#475569" font-size="14">调用业务能力</text>
+
+    <line x1="856" y1="197" x2="914" y2="197" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="931" y="120" width="105" height="154" rx="10" fill="#fff7ed" stroke="#fdba74" filter="url(#shadow)"/>
+    <text x="983" y="156" text-anchor="middle" fill="#c2410c" font-size="18" font-weight="700">Review</text>
+    <text x="983" y="194" text-anchor="middle" fill="#475569" font-size="14">确认</text>
+    <text x="983" y="224" text-anchor="middle" fill="#475569" font-size="14">权限</text>
+    <text x="983" y="254" text-anchor="middle" fill="#475569" font-size="14">审计</text>
+
+    <rect x="226" y="335" width="628" height="58" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="540" y="360" text-anchor="middle" fill="#334155" font-size="15" font-weight="700">Agent 负责选择，Workflow 负责管住关键路径。</text>
+    <text x="540" y="382" text-anchor="middle" fill="#64748b" font-size="13">涉及写动作时，不要只靠 Prompt 判断，至少要留下确认点和 trace。</text>
+  </g>
+</svg>
