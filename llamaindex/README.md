@@ -56,6 +56,12 @@ EMBEDDING_MODEL=""
 8. [LlamaIndex 实战：向量检索解决不了关系问题？试试最小 GraphRAG](docs/08-graphrag-property-graph.md)
 9. [LlamaIndex 实战：PDF 进知识库前要检查什么？先做文档解析验收](docs/09-document-parsing.md)
 10. [LlamaIndex 实战：用 Workflow 管住 RAG 的检索、重试和工单动作](docs/10-agent-workflow-advanced.md)
+11. [LlamaIndex 实战：别再把多模态 RAG 做成 OCR Demo 了，我们从一个真实资料检索台开始](docs/11-multimodal-rag.md)
+12. [LlamaIndex 实战：文搜图和图搜图怎么做？用图片向量检索补上 OCR 的短板](docs/12-image-vector-retrieval.md)
+13. [LlamaIndex 实战：图片 RAG 不能只选一种检索，把 OCR、VLM 和图片向量合起来](docs/13-multimodal-image-rag.md)
+14. [LlamaIndex 实战：指标、规则和文档混在一起时，别只靠向量检索](docs/14-structured-data-qa.md)
+15. [LlamaIndex 实战：RAG 改完怎么知道没退步？做一套回归评估集](docs/15-rag-evaluation-dataset.md)
+16. [LlamaIndex 实战：什么时候才该微调？先把 RAG 问题定位清楚](docs/16-finetune-decision.md)
 
 ## 运行示例
 
@@ -121,6 +127,41 @@ python code/10_agent_workflow_advanced/01_multi_tool_agent.py
 python code/10_agent_workflow_advanced/02_workflow_with_review.py
 python code/10_agent_workflow_advanced/03_workflow_retry.py
 python code/10_agent_workflow_advanced/04_support_case_workflow.py
+
+# 进阶 5：多模态资料检索项目，PDF + 图片解析、入库、检索、回答
+cd code
+python -m multimodal_asset_rag.cli parse
+python -m multimodal_asset_rag.cli index
+python -m multimodal_asset_rag.cli search "哪份资料讲了 retrieval augmented generation？"
+python -m multimodal_asset_rag.cli answer "哪份资料讲了 retrieval augmented generation？"
+python -m multimodal_asset_rag.cli eval
+cd ..
+
+# 进阶 6：文搜图和图搜图
+python code/12_image_vector_retrieval/01_build_lite_image_index.py
+python code/12_image_vector_retrieval/02_text_to_image_search.py
+python code/12_image_vector_retrieval/03_image_to_image_search.py
+python code/12_image_vector_retrieval/04_llamaindex_clip_optional.py
+
+# 进阶 7：混合多模态图片 RAG
+python code/13_multimodal_image_rag/01_route_image_question.py
+python code/13_multimodal_image_rag/02_hybrid_image_search.py
+python code/13_multimodal_image_rag/03_answer_with_hybrid_sources.py
+
+# 进阶 8：结构化数据问答
+python code/14_structured_data_qa/01_sql_metric_query.py
+python code/14_structured_data_qa/02_hybrid_policy_answer.py
+python code/14_structured_data_qa/03_nlsql_optional.py
+python code/14_structured_data_qa/04_structured_qa_flow.py
+
+# 进阶 9：RAG 回归评估
+python code/15_rag_evaluation/01_build_eval_dataset.py
+python code/15_rag_evaluation/02_run_regression_check.py
+
+# 进阶 10：微调决策
+python code/16_finetune_decision/01_diagnose_before_finetune.py
+python code/16_finetune_decision/02_prepare_embedding_pairs.py
+python code/16_finetune_decision/03_decision_report.py
 ```
 
 这些代码优先保持清晰，不追求一次覆盖所有高级参数。像 LlamaParse 这类需要额外服务或依赖的能力，会在代码里做提示，不让示例变成一跑就报错。

@@ -1,0 +1,440 @@
+{
+  "name": "chapter11 multimodal rag assets",
+  "description": "PDF and image files for OCR, PaddleOCR-VL, VLM caption, and RAG demos.",
+  "total": 30,
+  "records": [
+    {
+      "id": "pdf_attention_is_all_you_need",
+      "type": "pdf",
+      "title": "Attention Is All You Need",
+      "path": "pdfs\\attention-is-all-you-need.pdf",
+      "source_url": "https://arxiv.org/pdf/1706.03762",
+      "bytes": 2215244,
+      "tags": [
+        "transformer",
+        "paper",
+        "tables",
+        "figures"
+      ]
+    },
+    {
+      "id": "pdf_bert",
+      "type": "pdf",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers",
+      "path": "pdfs\\bert.pdf",
+      "source_url": "https://arxiv.org/pdf/1810.04805",
+      "bytes": 775166,
+      "tags": [
+        "nlp",
+        "paper",
+        "figures"
+      ]
+    },
+    {
+      "id": "pdf_gpt3",
+      "type": "pdf",
+      "title": "Language Models are Few-Shot Learners",
+      "path": "pdfs\\gpt3.pdf",
+      "source_url": "https://arxiv.org/pdf/2005.14165",
+      "bytes": 6768044,
+      "tags": [
+        "llm",
+        "paper",
+        "tables"
+      ]
+    },
+    {
+      "id": "pdf_rag",
+      "type": "pdf",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "path": "pdfs\\retrieval-augmented-generation.pdf",
+      "source_url": "https://arxiv.org/pdf/2005.11401",
+      "bytes": 885323,
+      "tags": [
+        "rag",
+        "paper",
+        "figures"
+      ]
+    },
+    {
+      "id": "pdf_clip",
+      "type": "pdf",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "path": "pdfs\\clip.pdf",
+      "source_url": "https://arxiv.org/pdf/2103.00020",
+      "bytes": 6813639,
+      "tags": [
+        "clip",
+        "multimodal",
+        "paper",
+        "figures"
+      ]
+    },
+    {
+      "id": "pdf_lora",
+      "type": "pdf",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "path": "pdfs\\lora.pdf",
+      "source_url": "https://arxiv.org/pdf/2106.09685",
+      "bytes": 1609513,
+      "tags": [
+        "finetuning",
+        "paper",
+        "tables"
+      ]
+    },
+    {
+      "id": "pdf_llama",
+      "type": "pdf",
+      "title": "LLaMA: Open and Efficient Foundation Language Models",
+      "path": "pdfs\\llama.pdf",
+      "source_url": "https://arxiv.org/pdf/2302.13971",
+      "bytes": 726566,
+      "tags": [
+        "llm",
+        "paper",
+        "tables"
+      ]
+    },
+    {
+      "id": "pdf_sam",
+      "type": "pdf",
+      "title": "Segment Anything",
+      "path": "pdfs\\segment-anything.pdf",
+      "source_url": "https://arxiv.org/pdf/2304.02643",
+      "bytes": 15644599,
+      "tags": [
+        "vision",
+        "paper",
+        "figures"
+      ]
+    },
+    {
+      "id": "pdf_flamingo",
+      "type": "pdf",
+      "title": "Flamingo: a Visual Language Model for Few-Shot Learning",
+      "path": "pdfs\\flamingo.pdf",
+      "source_url": "https://arxiv.org/pdf/2204.14198",
+      "bytes": 31579390,
+      "tags": [
+        "vlm",
+        "paper",
+        "figures"
+      ]
+    },
+    {
+      "id": "pdf_layoutlm",
+      "type": "pdf",
+      "title": "LayoutLM: Pre-training of Text and Layout for Document Image Understanding",
+      "path": "pdfs\\layoutlm.pdf",
+      "source_url": "https://arxiv.org/pdf/1912.13318",
+      "bytes": 1078240,
+      "tags": [
+        "document-ai",
+        "ocr",
+        "layout",
+        "paper"
+      ]
+    },
+    {
+      "id": "img_01_opencv-sample-data-blender-suzanne1-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: Blender_Suzanne1.jpg",
+      "path": "images\\img_01_opencv-sample-data-blender-suzanne1-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/Blender_Suzanne1.jpg",
+      "bytes": 25415,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_02_opencv-sample-data-blender-suzanne2-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: Blender_Suzanne2.jpg",
+      "path": "images\\img_02_opencv-sample-data-blender-suzanne2-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/Blender_Suzanne2.jpg",
+      "bytes": 25417,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_03_opencv-sample-data-happyfish-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: HappyFish.jpg",
+      "path": "images\\img_03_opencv-sample-data-happyfish-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/HappyFish.jpg",
+      "bytes": 8283,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_04_opencv-sample-data-linuxlogo-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: LinuxLogo.jpg",
+      "path": "images\\img_04_opencv-sample-data-linuxlogo-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/LinuxLogo.jpg",
+      "bytes": 6968,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_05_opencv-sample-data-windowslogo-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: WindowsLogo.jpg",
+      "path": "images\\img_05_opencv-sample-data-windowslogo-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/WindowsLogo.jpg",
+      "bytes": 11318,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_06_opencv-sample-data-aero1-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: aero1.jpg",
+      "path": "images\\img_06_opencv-sample-data-aero1-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/aero1.jpg",
+      "bytes": 59918,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_07_opencv-sample-data-aero3-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: aero3.jpg",
+      "path": "images\\img_07_opencv-sample-data-aero3-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/aero3.jpg",
+      "bytes": 52974,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_08_opencv-sample-data-aloegt-png",
+      "type": "image",
+      "title": "OpenCV sample data: aloeGT.png",
+      "path": "images\\img_08_opencv-sample-data-aloegt-png.png",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/aloeGT.png",
+      "bytes": 98827,
+      "mime": "image/png",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_09_opencv-sample-data-aloel-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: aloeL.jpg",
+      "path": "images\\img_09_opencv-sample-data-aloel-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/aloeL.jpg",
+      "bytes": 315069,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_10_opencv-sample-data-aloer-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: aloeR.jpg",
+      "path": "images\\img_10_opencv-sample-data-aloer-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/aloeR.jpg",
+      "bytes": 315113,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_11_opencv-sample-data-apple-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: apple.jpg",
+      "path": "images\\img_11_opencv-sample-data-apple-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/apple.jpg",
+      "bytes": 51705,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_12_opencv-sample-data-baboon-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: baboon.jpg",
+      "path": "images\\img_12_opencv-sample-data-baboon-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/baboon.jpg",
+      "bytes": 179920,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_13_opencv-sample-data-basketball1-png",
+      "type": "image",
+      "title": "OpenCV sample data: basketball1.png",
+      "path": "images\\img_13_opencv-sample-data-basketball1-png.png",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/basketball1.png",
+      "bytes": 132826,
+      "mime": "image/png",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_14_opencv-sample-data-basketball2-png",
+      "type": "image",
+      "title": "OpenCV sample data: basketball2.png",
+      "path": "images\\img_14_opencv-sample-data-basketball2-png.png",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/basketball2.png",
+      "bytes": 132763,
+      "mime": "image/png",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_15_opencv-sample-data-blox-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: blox.jpg",
+      "path": "images\\img_15_opencv-sample-data-blox-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/blox.jpg",
+      "bytes": 7705,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_16_opencv-sample-data-board-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: board.jpg",
+      "path": "images\\img_16_opencv-sample-data-board-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/board.jpg",
+      "bytes": 121597,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_17_opencv-sample-data-box-png",
+      "type": "image",
+      "title": "OpenCV sample data: box.png",
+      "path": "images\\img_17_opencv-sample-data-box-png.png",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/box.png",
+      "bytes": 50728,
+      "mime": "image/png",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_18_opencv-sample-data-box-in-scene-png",
+      "type": "image",
+      "title": "OpenCV sample data: box_in_scene.png",
+      "path": "images\\img_18_opencv-sample-data-box-in-scene-png.png",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/box_in_scene.png",
+      "bytes": 122490,
+      "mime": "image/png",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_19_opencv-sample-data-building-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: building.jpg",
+      "path": "images\\img_19_opencv-sample-data-building-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/building.jpg",
+      "bytes": 79718,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    },
+    {
+      "id": "img_20_opencv-sample-data-butterfly-jpg",
+      "type": "image",
+      "title": "OpenCV sample data: butterfly.jpg",
+      "path": "images\\img_20_opencv-sample-data-butterfly-jpg.jpg",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.x/samples/data/butterfly.jpg",
+      "bytes": 44746,
+      "mime": "image/jpeg",
+      "width": null,
+      "height": null,
+      "tags": [
+        "github",
+        "opencv-sample-data"
+      ]
+    }
+  ]
+}

@@ -2,3 +2,13 @@ llama-index
 llama-index-llms-openai-like
 python-dotenv
 pymupdf
+pillow
+requests
+fastapi
+uvicorn
+qdrant-client
+# Optional local CLIP provider:
+# sentence-transformers
+# Optional for chapter 12 real CLIP retrieval:
+# llama-index-embeddings-clip
+# git+https://github.com/openai/CLIP.git

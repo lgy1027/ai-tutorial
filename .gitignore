@@ -27,6 +27,8 @@ share/python-wheels/
 *.egg
 MANIFEST
 docs/
+!llamaindex/docs/
+!llamaindex/docs/**
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -198,3 +200,6 @@ cython_debug/
 AGENTS.md
 .iflow/
 CLAUDE.md
+llamaindex/data/media_project/storage/
+llamaindex/data/media_project/downloads/
+llamaindex/data/media_project/multimodal_asset_rag/

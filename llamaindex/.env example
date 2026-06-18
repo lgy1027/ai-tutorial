@@ -5,5 +5,61 @@ LLAMAINDEX_CONTEXT_WINDOW="32768"
 
 EMBEDDING_MODEL=""
 EMBEDDING_BASE_URL=""
+EMBEDDING_API_KEY=""
+# 如果当前模型服务不支持 embeddings，可临时设为 mock 跑通教程链路。
+# 生产环境建议配置真实 embedding。
+EMBEDDING_PROVIDER="openai"
+EMBEDDING_TIMEOUT="120"
+EMBEDDING_BATCH_SIZE="5"
+EMBEDDING_REQUEST_INTERVAL="0.2"
+EMBEDDING_RETRY_COUNT="5"
+
+# Multimodal Asset RAG：Qdrant 向量库
+# 留空 QDRANT_URL 时使用本地持久化 Qdrant Local
+QDRANT_URL=""
+QDRANT_API_KEY=""
+QDRANT_TEXT_COLLECTION="multimodal_text"
+QDRANT_IMAGE_COLLECTION="multimodal_image"
+QDRANT_UPSERT_BATCH_SIZE="16"
+
+# Multimodal Asset RAG：本地 CLIP / SigLIP 图片向量
+# lite 是无需模型的兜底；sentence_transformers 会加载本地 CLIP 模型
+IMAGE_EMBEDDING_PROVIDER="lite"
+CLIP_MODEL="clip-ViT-B-32"
+
+# 可选：Rerank 阶段。第一版可以不开，等检索召回稳定后再接。
+RERANK_PROVIDER="none"
+RERANK_MODEL=""
+RERANK_BASE_URL=""
+RERANK_API_KEY=""
 
 LLAMAINDEX_OBSERVABILITY_PROVIDER=""
+
+# 第 11 章图片 RAG：OCR 服务
+# 推荐本地部署 OCR 服务，接收 {"image_base64": "...", "file_name": "..."}
+# 返回 {"blocks": [{"text": "...", "bbox": ..., "confidence": ...}]}
+OCR_PROVIDER="http"
+OCR_HTTP_URL="http://127.0.0.1:8000/ocr"
+OCR_HTTP_TIMEOUT="60"
+PADDLEOCR_DEVICE="cpu"
+# 可选：调用 PaddleOCR-VL 官方异步 API，适合复杂文档、表格、公式、版面解析
+# OCR_PROVIDER="paddleocr_vl_api"
+PADDLEOCR_VL_API_TOKEN=""
+PADDLEOCR_VL_JOB_URL="https://paddleocr.aistudio-app.com/api/v2/ocr/jobs"
+PADDLEOCR_VL_MODEL="PaddleOCR-VL-1.6"
+PADDLEOCR_VL_TIMEOUT="300"
+PADDLEOCR_VL_POLL_INTERVAL="5"
+PADDLEOCR_VL_USE_DOC_ORIENTATION_CLASSIFY="false"
+PADDLEOCR_VL_USE_DOC_UNWARPING="false"
+PADDLEOCR_VL_USE_CHART_RECOGNITION="false"
+# 可选：OCR_PROVIDER="tesseract"
+OCR_TESSERACT_LANG="chi_sim+eng"
+
+# 第 11 章图片 RAG：VLM 图片描述
+# 使用 OpenAI-compatible /chat/completions 视觉模型接口
+VLM_PROVIDER="openai_compatible"
+VLM_BASE_URL=""
+VLM_API_KEY=""
+VLM_MODEL=""
+VLM_TEMPERATURE="0.1"
+VLM_TIMEOUT="120"
